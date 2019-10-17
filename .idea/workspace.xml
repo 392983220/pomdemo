@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98438fe6-443a-4d6c-b0d3-9e70ab8f77d5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/controller/WxPayController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/service/OrderInfoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/service/impl/OrderInfoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/OrderInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/OrderInfoMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/OrderInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/OrderInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/controller/WxPayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/controller/WxPayController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumerdemo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/consumerdemo/src/main/resources/application.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -41,8 +37,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/consumerdemo/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="15" column="59" lean-forward="true" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
+            <state relative-caret-position="265">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
         </entry>
@@ -50,10 +46,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/wx/WxApi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="28" column="31" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="31" />
+            <state relative-caret-position="112">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#743#759#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -62,10 +59,24 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/controller/WxPayController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="59" column="60" lean-forward="true" selection-start-line="59" selection-start-column="60" selection-end-line="59" selection-end-column="60" />
+            <state relative-caret-position="292">
+              <caret line="63" column="45" lean-forward="true" selection-start-line="63" selection-start-column="45" selection-end-line="63" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/controller/WxController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="443">
+              <caret line="38" column="33" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1220#1221#0" expanded="true" />
+                <element signature="e#1268#1269#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -122,70 +133,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/dto/OrderInfo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
-              <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
-              <folding>
-                <element signature="e#2647#2648#0" expanded="true" />
-                <element signature="e#2677#2678#0" expanded="true" />
-                <element signature="e#2961#2962#0" expanded="true" />
-                <element signature="e#2999#3000#0" expanded="true" />
-                <element signature="e#3280#3281#0" expanded="true" />
-                <element signature="e#3314#3315#0" expanded="true" />
-                <element signature="e#3620#3621#0" expanded="true" />
-                <element signature="e#3666#3667#0" expanded="true" />
-                <element signature="e#3947#3948#0" expanded="true" />
-                <element signature="e#3981#3982#0" expanded="true" />
-                <element signature="e#4287#4288#0" expanded="true" />
-                <element signature="e#4333#4334#0" expanded="true" />
-                <element signature="e#4611#4612#0" expanded="true" />
-                <element signature="e#4644#4645#0" expanded="true" />
-                <element signature="e#4945#4946#0" expanded="true" />
-                <element signature="e#4989#4990#0" expanded="true" />
-                <element signature="e#5274#5275#0" expanded="true" />
-                <element signature="e#5309#5310#0" expanded="true" />
-                <element signature="e#5621#5622#0" expanded="true" />
-                <element signature="e#5669#5670#0" expanded="true" />
-                <element signature="e#5951#5952#0" expanded="true" />
-                <element signature="e#5985#5986#0" expanded="true" />
-                <element signature="e#6292#6293#0" expanded="true" />
-                <element signature="e#6338#6339#0" expanded="true" />
-                <element signature="e#6632#6633#0" expanded="true" />
-                <element signature="e#6670#6671#0" expanded="true" />
-                <element signature="e#6997#6998#0" expanded="true" />
-                <element signature="e#7051#7052#0" expanded="true" />
-                <element signature="e#7330#7331#0" expanded="true" />
-                <element signature="e#7363#7364#0" expanded="true" />
-                <element signature="e#7665#7666#0" expanded="true" />
-                <element signature="e#7709#7710#0" expanded="true" />
-                <element signature="e#7987#7988#0" expanded="true" />
-                <element signature="e#8020#8021#0" expanded="true" />
-                <element signature="e#8321#8322#0" expanded="true" />
-                <element signature="e#8365#8366#0" expanded="true" />
-                <element signature="e#8638#8639#0" expanded="true" />
-                <element signature="e#8670#8671#0" expanded="true" />
-                <element signature="e#8964#8965#0" expanded="true" />
-                <element signature="e#9006#9007#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/OrderInfoMapper.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="507">
               <caret line="53" column="4" lean-forward="true" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/OrderInfoMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="507">
-              <caret line="185" column="30" selection-start-line="185" selection-start-column="14" selection-end-line="185" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -232,7 +183,6 @@
         <option value="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/controller/WxController.java" />
         <option value="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/contants/UserContant.java" />
         <option value="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/controller/PhoneAndPwdController.java" />
-        <option value="$PROJECT_DIR$/consumerdemo/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/wx/WxPay.java" />
         <option value="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/utils/ActiveMQUtils.java" />
         <option value="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/contants/WXPayConstants.java" />
@@ -249,6 +199,7 @@
         <option value="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/service/OrderInfoService.java" />
         <option value="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/service/impl/OrderInfoServiceImpl.java" />
         <option value="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/controller/WxPayController.java" />
+        <option value="$PROJECT_DIR$/consumerdemo/src/main/resources/application.properties" />
       </list>
     </option>
   </component>
@@ -634,7 +585,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ConsumerdemoApplication">
+  <component name="RunManager" selected="Spring Boot.ProviderdemoApplication">
     <configuration name="ConsumerdemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="consumerdemo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="goal.money.consumerdemo.ConsumerdemoApplication" />
@@ -667,7 +618,7 @@
       <workItem from="1570620361668" duration="3027000" />
       <workItem from="1571216977732" duration="1826000" />
       <workItem from="1571220965737" duration="2079000" />
-      <workItem from="1571272088416" duration="17119000" />
+      <workItem from="1571272088416" duration="18962000" />
     </task>
     <task id="LOCAL-00001" summary="框架">
       <created>1571221501265</created>
@@ -690,11 +641,18 @@
       <option name="project" value="LOCAL" />
       <updated>1571292543438</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="登陆模块、微信支付">
+      <created>1571293442617</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1571293442617</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24051000" />
+    <option name="totallyTimeSpent" value="25894000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -714,7 +672,7 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Web" order="4" side_tool="true" />
       <window_info id="Designer" order="5" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.31099194" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.31099194" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info id="JRebel" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="0" />
@@ -726,8 +684,8 @@
       <window_info anchor="bottom" id="Terminal" order="6" weight="0.32991204" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" />
-      <window_info anchor="bottom" id="Run" order="9" visible="true" weight="0.04398827" />
-      <window_info anchor="bottom" id="Debug" order="10" weight="0.1085044" />
+      <window_info anchor="bottom" id="Run" order="9" weight="0.04398827" />
+      <window_info active="true" anchor="bottom" id="Debug" order="10" visible="true" weight="0.15249267" />
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="13" weight="0.32991204" />
@@ -753,6 +711,24 @@
     <MESSAGE value="框架" />
     <MESSAGE value="登陆模块、微信支付" />
     <option name="LAST_COMMIT_MESSAGE" value="登陆模块、微信支付" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/controller/WxPayController.java</url>
+          <line>44</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/wx/WxApi.java</url>
+          <line>23</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1020,18 +996,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/controller/WxController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="50" column="98" lean-forward="true" selection-start-line="50" selection-start-column="98" selection-end-line="50" selection-end-column="98" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1220#1221#0" expanded="true" />
-            <element signature="e#1268#1269#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/controller/PhoneAndPwdController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="291">
@@ -1241,27 +1205,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/controller/WxController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="38" column="33" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1220#1221#0" expanded="true" />
+            <element signature="e#1268#1269#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/consumerdemo/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="15" column="59" lean-forward="true" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
+        <state relative-caret-position="265">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/wx/WxApi.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="28" column="31" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="31" />
+        <state relative-caret-position="112">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#743#759#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/apache-maven-3.6.1/conf/logging/org/springframework/spring-web/4.3.13.RELEASE/spring-web-4.3.13.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="117" selection-start-line="117" selection-end-line="117" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/controller/WxPayController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="59" column="60" lean-forward="true" selection-start-line="59" selection-start-column="60" selection-end-line="59" selection-end-column="60" />
+        <state relative-caret-position="292">
+          <caret line="63" column="45" lean-forward="true" selection-start-line="63" selection-start-column="45" selection-end-line="63" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

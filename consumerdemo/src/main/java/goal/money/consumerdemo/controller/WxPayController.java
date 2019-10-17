@@ -34,7 +34,7 @@ public class WxPayController {
     @Reference
     private OrderInfoService orderService;
 
-    @ApiOperation(value = "wxpay")
+    @ApiOperation(value = "微信支付")
     @GetMapping(value = "wxpay")
     public String wxPay(OrderInfo orderInfo) throws Exception {
         return wxApi.wxPay(orderInfo);
