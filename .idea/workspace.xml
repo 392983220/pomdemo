@@ -2,51 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98438fe6-443a-4d6c-b0d3-9e70ab8f77d5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/30134ab6-d2a4-4043-86c7-cd64cd8d34d8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_58.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_activemq_activemq_broker_5_14_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_activemq_activemq_client_5_14_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_activemq_activemq_openwire_legacy_5_14_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_geronimo_specs_geronimo_j2ee_management_1_1_spec_1_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_geronimo_specs_geronimo_jms_1_1_spec_1_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_fusesource_hawtbuf_hawtbuf_1_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_activemq_1_5_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jms_4_3_13_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_messaging_4_3_13_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/config/webConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/contants/UserContant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/controller/WxController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/custom/CurrentComplete.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/custom/CurrentUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/custom/LoginReqComplete.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/custom/LoginRequired.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/utils/UrlUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/vo/UserVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/wx/WxReq.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/dto/UserInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/UserInfoMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/UserInfoMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/service/UserInfoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/service/impl/UserInfoServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/controller/WxPayController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/service/OrderInfoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/service/impl/OrderInfoServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consumerdemo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/consumerdemo/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/controller/testController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consumerdemo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/consumerdemo/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pomdemo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/pomdemo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/providerdemo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/providerdemo/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/dto/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/UserMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/UserMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/service/TestService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/service/impl/TestServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/providerdemo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/providerdemo/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/providerdemo/src/main/resources/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/providerdemo/src/main/resources/generatorConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/OrderInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/OrderInfoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/OrderInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/OrderInfoMapper.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -78,12 +39,65 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/consumerdemo/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="15" column="59" lean-forward="true" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/wx/WxApi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="27" column="57" selection-start-line="27" selection-start-column="57" selection-end-line="27" selection-end-column="57" />
+            <state relative-caret-position="298">
+              <caret line="28" column="31" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/controller/WxPayController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="59" column="60" lean-forward="true" selection-start-line="59" selection-start-column="60" selection-end-line="59" selection-end-column="60" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/service/OrderInfoService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="3" column="46" selection-start-line="3" selection-start-column="46" selection-end-line="3" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/service/UserInfoService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="13" column="53" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/service/impl/OrderInfoServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#480#481#0" expanded="true" />
+                <element signature="e#510#511#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -108,18 +122,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/providerdemo/src/main/resources/generatorConfig.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="45" column="69" selection-start-line="45" selection-start-column="69" selection-end-line="45" selection-end-column="69" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/dto/OrderInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
+            <state relative-caret-position="87">
               <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
               <folding>
                 <element signature="e#2647#2648#0" expanded="true" />
@@ -168,24 +173,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/dto/UserInfo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3868#3869#0" expanded="true" />
-                <element signature="e#3897#3898#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/OrderInfoMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-426">
-              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+            <state relative-caret-position="507">
+              <caret line="53" column="4" lean-forward="true" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -193,32 +184,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/OrderInfoMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-798" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e326d87e-8829-4d54-a769-449c5a378ea7/console.sql">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/UserInfoMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="56" column="23" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/UserInfoMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="258" selection-start-line="258" selection-end-line="258" />
+            <state relative-caret-position="507">
+              <caret line="185" column="30" selection-start-line="185" selection-start-column="14" selection-end-line="185" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -272,11 +239,16 @@
         <option value="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/utils/WXPayXmlUtil.java" />
         <option value="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/utils/WxPayUtils.java" />
         <option value="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/utils/CommonUtil.java" />
-        <option value="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/wx/WxApi.java" />
         <option value="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/dto/OrderInfo.java" />
         <option value="$PROJECT_DIR$/providerdemo/src/main/resources/generatorConfig.xml" />
         <option value="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/dto/UserInfo.java" />
         <option value="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/UserInfoMapper.java" />
+        <option value="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/wx/WxApi.java" />
+        <option value="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/OrderInfoMapper.xml" />
+        <option value="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/OrderInfoMapper.java" />
+        <option value="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/service/OrderInfoService.java" />
+        <option value="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/service/impl/OrderInfoServiceImpl.java" />
+        <option value="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/controller/WxPayController.java" />
       </list>
     </option>
   </component>
@@ -639,6 +611,7 @@
       <recent name="C:\Users\Administrator\Desktop\pomdemo\consumerdemo\src\main\java\goal\money\consumerdemo" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="goal.money.consumerdemo.controller" />
       <recent name="goal.money.consumerdemo.utils" />
       <recent name="goal.money.consumerdemo.contants" />
       <recent name="goal.money.consumerdemo.wx" />
@@ -694,7 +667,7 @@
       <workItem from="1570620361668" duration="3027000" />
       <workItem from="1571216977732" duration="1826000" />
       <workItem from="1571220965737" duration="2079000" />
-      <workItem from="1571272088416" duration="16008000" />
+      <workItem from="1571272088416" duration="17119000" />
     </task>
     <task id="LOCAL-00001" summary="框架">
       <created>1571221501265</created>
@@ -710,11 +683,18 @@
       <option name="project" value="LOCAL" />
       <updated>1571273884380</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="登陆模块、微信支付">
+      <created>1571292543438</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1571292543438</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22940000" />
+    <option name="totallyTimeSpent" value="24051000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -727,7 +707,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="Capture Tool" order="1" />
@@ -735,7 +714,7 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Web" order="4" side_tool="true" />
       <window_info id="Designer" order="5" />
-      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.31099194" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.31099194" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info id="JRebel" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="0" />
@@ -747,7 +726,7 @@
       <window_info anchor="bottom" id="Terminal" order="6" weight="0.32991204" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" />
-      <window_info anchor="bottom" id="Run" order="9" visible="true" weight="0.11730205" />
+      <window_info anchor="bottom" id="Run" order="9" visible="true" weight="0.04398827" />
       <window_info anchor="bottom" id="Debug" order="10" weight="0.1085044" />
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
@@ -757,7 +736,7 @@
       <window_info anchor="bottom" id="JRebel Console" order="16" side_tool="true" />
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info active="true" anchor="right" id="Database" order="2" visible="true" weight="0.3297587" />
+      <window_info anchor="right" id="Database" order="2" weight="0.3297587" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info anchor="right" id="Maven" order="5" weight="0.3297587" />
@@ -772,7 +751,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="框架" />
-    <option name="LAST_COMMIT_MESSAGE" value="框架" />
+    <MESSAGE value="登陆模块、微信支付" />
+    <option name="LAST_COMMIT_MESSAGE" value="登陆模块、微信支付" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1062,13 +1042,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/consumerdemo/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="59" lean-forward="true" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/wx/WxPay.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1124,42 +1097,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/service/UserInfoService.java">
+    <entry file="file://$PROJECT_DIR$/providerdemo/src/main/resources/generatorConfig.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="53" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
+        <state relative-caret-position="228">
+          <caret line="45" column="69" selection-start-line="45" selection-start-column="69" selection-end-line="45" selection-end-column="69" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/service/impl/UserInfoServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/dto/UserInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="35" column="54" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
+        <state relative-caret-position="209">
+          <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#765#766#0" expanded="true" />
-            <element signature="e#819#820#0" expanded="true" />
-            <element signature="e#880#881#0" expanded="true" />
-            <element signature="e#937#938#0" expanded="true" />
-            <element signature="e#1015#1016#0" expanded="true" />
-            <element signature="e#1078#1079#0" expanded="true" />
+            <element signature="e#3868#3869#0" expanded="true" />
+            <element signature="e#3897#3898#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/wx/WxApi.java">
+    <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/UserInfoMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="27" column="57" selection-start-line="27" selection-start-column="57" selection-end-line="27" selection-end-column="57" />
+        <state relative-caret-position="267">
+          <caret line="258" selection-start-line="258" selection-end-line="258" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/UserInfoMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="56" column="23" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e326d87e-8829-4d54-a769-449c5a378ea7/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/dto/OrderInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
+        <state relative-caret-position="87">
           <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
           <folding>
             <element signature="e#2647#2648#0" expanded="true" />
@@ -1206,56 +1185,88 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/OrderInfoMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-426">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/providerdemo/src/main/resources/generatorConfig.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="45" column="69" selection-start-line="45" selection-start-column="69" selection-end-line="45" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/dto/UserInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3868#3869#0" expanded="true" />
-            <element signature="e#3897#3898#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/UserInfoMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="258" selection-start-line="258" selection-end-line="258" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/UserInfoMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="56" column="23" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/OrderInfoMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-798" />
+        <state relative-caret-position="507">
+          <caret line="185" column="30" selection-start-line="185" selection-start-column="14" selection-end-line="185" selection-end-column="30" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e326d87e-8829-4d54-a769-449c5a378ea7/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/OrderInfoMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="507">
+          <caret line="53" column="4" lean-forward="true" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/service/OrderInfoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="46" selection-start-line="3" selection-start-column="46" selection-end-line="3" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/service/UserInfoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="53" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/service/impl/UserInfoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="35" column="54" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#765#766#0" expanded="true" />
+            <element signature="e#819#820#0" expanded="true" />
+            <element signature="e#880#881#0" expanded="true" />
+            <element signature="e#937#938#0" expanded="true" />
+            <element signature="e#1015#1016#0" expanded="true" />
+            <element signature="e#1078#1079#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/service/impl/OrderInfoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#480#481#0" expanded="true" />
+            <element signature="e#510#511#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumerdemo/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="15" column="59" lean-forward="true" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/wx/WxApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="28" column="31" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/controller/WxPayController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="59" column="60" lean-forward="true" selection-start-line="59" selection-start-column="60" selection-end-line="59" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
