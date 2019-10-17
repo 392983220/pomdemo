@@ -1,6 +1,9 @@
 package goal.money.providerdemo.mapper;
 
 import goal.money.providerdemo.dto.OrderInfo;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface OrderInfoMapper {
     /**
@@ -52,4 +55,6 @@ public interface OrderInfoMapper {
     int updateByPrimaryKey(OrderInfo record);
 
     void updateOrderState(String orderNumber);
+
+    List<OrderInfo> queryByState(@Param("orderState") int orderState,@Param("startPage")int startPage,@Param("pageSize")int pageSize);
 }
