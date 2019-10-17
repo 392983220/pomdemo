@@ -6,23 +6,20 @@
         <groupId>goal.money</groupId>
         <artifactId>pomdemo</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
+        <relativePath>../pom.xml</relativePath>
     </parent>
     <groupId>goal.money</groupId>
     <artifactId>providerdemo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>providerdemo</name>
     <description>Demo project for Spring Boot</description>
+    <packaging>jar</packaging>
 
     <properties>
         <java.version>1.8</java.version>
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
@@ -33,28 +30,12 @@
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
         </dependency>
-        <!--dubbo开始   dubbo只能放在生产者的pom文件中  放在公共pom中无效-->
-        <dependency>
-            <groupId>com.alibaba.boot</groupId>
-            <artifactId>dubbo-spring-boot-starter</artifactId>
-            <version>0.1.0</version>
-        </dependency>
-        <!-- 实现了注册的功能 向zookeeper注册功能-->
-        <dependency>
-            <groupId>com.101tec</groupId>
-            <artifactId>zkclient</artifactId>
-            <version>0.10</version>
-        </dependency>
-        <!--dubbo结束-->
 
     </dependencies>
 
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
+            <!--自动生成xml文件插件开始-->
             <plugin>
                 <groupId>org.mybatis.generator</groupId>
                 <artifactId>mybatis-generator-maven-plugin</artifactId>
@@ -70,6 +51,7 @@
                     <overwrite>true</overwrite>
                 </configuration>
             </plugin>
+            <!--自动生成xml文件插件结束-->
         </plugins>
         <resources>
             <resource>

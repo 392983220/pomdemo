@@ -24,13 +24,6 @@
             <artifactId>providerdemo</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
-        <!--redis开始-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-redis</artifactId>
-        </dependency>
-        <!--redis结束-->
-        <!--Swagger开始-->
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
@@ -41,7 +34,26 @@
             <artifactId>swagger-bootstrap-ui</artifactId>
             <version>1.9.3</version>
         </dependency>
-        <!--Swagger结束-->
+        <!--swagger结束-->
+        <!--redis开始-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+        <!--redis结束-->
+        <!--activemq依赖开始-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-activemq</artifactId>
+        </dependency>
+        <!--activemq依赖结束-->
+        <!--httpclient依赖开始-->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.5</version>
+        </dependency>
+        <!--httpclient依赖结束-->
     </dependencies>
 
     <build>
