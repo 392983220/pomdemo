@@ -49,6 +49,12 @@
             <version>1.2.58</version>
         </dependency>
         <!--fastJson结束-->
+        <!--aop开始-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+        <!--aop结束-->
     </dependencies>
 
     <build>

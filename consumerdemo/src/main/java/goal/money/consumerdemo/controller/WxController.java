@@ -4,6 +4,8 @@ import com.alibaba.dubbo.config.annotation.Reference;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import goal.money.consumerdemo.contants.UserContant;
+import goal.money.consumerdemo.custom.CurrentUser;
+import goal.money.consumerdemo.custom.LoginRequired;
 import goal.money.consumerdemo.utils.RedisUtils;
 import goal.money.consumerdemo.utils.UrlUtils;
 import goal.money.consumerdemo.vo.UserVo;
@@ -60,9 +62,14 @@ public class WxController {
 
     @ResponseBody
     @GetMapping(value = "bindPhone")
-    public String bindPhone(int phone ,String openid){
-        userInfoService.bindPhone(phone,openid);
-        return "绑定成功";
+    @LoginRequired
+    public String bindPhone(int phone ,@CurrentUser UserVo userVo){
+        if (null== userInfoService.queryByPhone(phone)){
+            userInfoService.bindPhone(phone,userVo.getOpenid());
+            return "绑定成功";
+        }else {
+            return "该手机号已被用过";
+        }
     }
 
 }

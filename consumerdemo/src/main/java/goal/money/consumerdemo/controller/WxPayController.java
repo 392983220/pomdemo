@@ -2,7 +2,10 @@ package goal.money.consumerdemo.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.google.common.collect.Maps;
+import goal.money.consumerdemo.custom.CurrentUser;
+import goal.money.consumerdemo.custom.LoginRequired;
 import goal.money.consumerdemo.utils.WxPayUtils;
+import goal.money.consumerdemo.vo.UserVo;
 import goal.money.consumerdemo.wx.WxApi;
 import goal.money.consumerdemo.wx.WxPay;
 import goal.money.providerdemo.dto.OrderInfo;
@@ -36,8 +39,12 @@ public class WxPayController {
 
     @ApiOperation(value = "微信支付")
     @GetMapping(value = "wxpay")
-    public String wxPay(OrderInfo orderInfo) throws Exception {
-        return wxApi.wxPay(orderInfo);
+    @LoginRequired
+    public String wxPay(OrderInfo orderInfo, @CurrentUser UserVo userVo) throws Exception {
+        if (orderInfo.getUserPhone() == userVo.getPhone() &&
+                orderInfo.getTakeDeliveryAddress() != null && orderInfo.getTakeDeliveryName() != null && orderInfo.getTakeDeliveryPhone() != 0)
+            return wxApi.wxPay(orderInfo);
+        else return "订单信息不完整";
     }
 
     @RequestMapping(value = "returnBack")
@@ -57,7 +64,7 @@ public class WxPayController {
             //验证签名与金额
             boolean isCheckSign = WxPayUtils.checkSign(resultMap, wxPay.getKey());
             if (isCheckSign) {
-               String orderNo=resultMap.get("out_trade_no");
+                String orderNo = resultMap.get("out_trade_no");
                 orderService.updateOrderState(orderNo);//修改订单状态为"1"
                 Map<String, String> rMap = Maps.newHashMap();
                 rMap.put("return_code", "SUCCESS");

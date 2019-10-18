@@ -34,17 +34,22 @@ public class PhoneAndPwdController {
 
     @ApiOperation(value = "账号密码登陆")
     @GetMapping(value = "phoneAndPwdLogin")
-    public String phoneAndPwdLogin(int phone, String password) {
-        UserInfo userInfo = userInfoService.queryByPhone(phone);
-        if (userInfo != null) {
-            if (password.equals(userInfo.getPassword())){
-                redisUtils.set(UserContant.Phone_PWD_NAME_SPACE+phone,userInfo,60*300);
-                return userInfo.toString();
-            }else {
-                return "用户名或密码不对";
-            }
+    public String phoneAndPwdLogin(int phone, String password, boolean isAccept) {
+        if (!isAccept) {
+            return "请点击我同意";
         } else {
-            return "用户名不存在";
+            UserInfo userInfo = userInfoService.queryByPhone(phone);
+            if (userInfo != null) {
+                if (password.equals(userInfo.getPassword())) {
+                    redisUtils.set(UserContant.Phone_PWD_NAME_SPACE + phone, userInfo, 60 * 300);
+                    return userInfo.toString();
+                } else {
+                    return "用户名或密码不对";
+                }
+            } else {
+                return "用户名不存在";
+            }
         }
+
     }
 }

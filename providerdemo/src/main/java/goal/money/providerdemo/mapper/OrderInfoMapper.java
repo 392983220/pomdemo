@@ -56,5 +56,13 @@ public interface OrderInfoMapper {
 
     void updateOrderState(String orderNumber);
 
-    List<OrderInfo> queryByState(@Param("orderState") int orderState,@Param("startPage")int startPage,@Param("pageSize")int pageSize);
+    List<OrderInfo> queryByState(@Param("orderState") int orderState, @Param("startPage")int startPage, @Param("pageSize")int pageSize);
+
+    List<OrderInfo> queryByNo(@Param("orderNumber") String orderNumber,@Param("orderState") int orderState);
+
+    List<OrderInfo> queryByName(@Param("productName")String productName,@Param("orderState") int orderState);
+
+    OrderInfo queryByOrderNo(String orderNumber);
+
+    void updateOrderAssessment(OrderInfo orderInfo);
 }
