@@ -55,6 +55,12 @@
             <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
         <!--aop结束-->
+        <!--@Slf4j自动化日志对象-log-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.16</version>
+        </dependency>
     </dependencies>
 
     <build>

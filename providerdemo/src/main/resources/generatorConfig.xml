@@ -18,8 +18,8 @@
         </commentGenerator>
 
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://localhost:3306/wangyiyanxuan?=true"
-                        userId="root" password="392983">
+                        connectionURL="jdbc:mysql://localhost:3306/yanxuan?=true"
+                        userId="root" password="root">
         </jdbcConnection>
 
         <javaTypeResolver>
@@ -43,7 +43,7 @@
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 
-        <table schema="" tableName="order_info " domainObjectName="OrderInfo"
+        <table schema="" tableName="product_info " domainObjectName="ProductInfo"
                enableCountByExample="false"
                enableUpdateByExample="false"
                enableDeleteByExample="false"

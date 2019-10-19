@@ -14,6 +14,7 @@ public interface UserInfoService {
     void inserPhoneAndPwd(int phone,String password);
 
     void updatePersonalInfo(UserInfo userInfo);
+    //查userInfo表
 
     int queryUserLevel(int phone);
 
