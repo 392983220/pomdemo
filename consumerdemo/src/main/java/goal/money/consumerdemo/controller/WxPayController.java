@@ -65,7 +65,7 @@ public class WxPayController {
             boolean isCheckSign = WxPayUtils.checkSign(resultMap, wxPay.getKey());
             if (isCheckSign) {
                 String orderNo = resultMap.get("out_trade_no");
-                orderService.updateOrderState(orderNo);//修改订单状态为"1"
+                orderService.updateOrderState(orderNo);//修改订单状态为"2"   待发货
                 Map<String, String> rMap = Maps.newHashMap();
                 rMap.put("return_code", "SUCCESS");
                 rMap.put("return_msg", "OK");

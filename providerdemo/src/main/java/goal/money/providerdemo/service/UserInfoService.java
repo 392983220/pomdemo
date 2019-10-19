@@ -13,4 +13,6 @@ public interface UserInfoService {
 
     void inserPhoneAndPwd(int phone,String password);
 
+    void updatePersonalInfo(UserInfo userInfo);
+
 }

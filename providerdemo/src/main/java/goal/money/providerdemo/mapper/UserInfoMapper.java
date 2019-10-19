@@ -59,4 +59,6 @@ public interface UserInfoMapper {
     UserInfo queryByPhone(int phone);
 
     void inserPhoneAndPwd(@Param("phone") int phone,@Param("password") String password);
+
+    void updatePersonalInfo(UserInfo userInfo);
 }

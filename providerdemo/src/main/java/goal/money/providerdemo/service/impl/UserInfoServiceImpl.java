@@ -35,4 +35,9 @@ public class UserInfoServiceImpl implements UserInfoService {
     public void inserPhoneAndPwd(int phone, String password) {
         userInfoMapper.inserPhoneAndPwd(phone,password);
     }
+
+    @Override
+    public void updatePersonalInfo(UserInfo userInfo) {
+        userInfoMapper.updatePersonalInfo(userInfo);
+    }
 }

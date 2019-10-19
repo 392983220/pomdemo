@@ -1,7 +1,6 @@
 package goal.money.providerdemo.dto;
 
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  *
@@ -144,7 +143,7 @@ public class UserInfo implements Serializable {
      *
      * @mbg.generated
      */
-    private Date userBirth;
+    private Long userBirth;
 
     /**
      *
@@ -499,7 +498,7 @@ public class UserInfo implements Serializable {
      *
      * @mbg.generated
      */
-    public Date getUserBirth() {
+    public Long getUserBirth() {
         return userBirth;
     }
 
@@ -511,7 +510,7 @@ public class UserInfo implements Serializable {
      *
      * @mbg.generated
      */
-    public void setUserBirth(Date userBirth) {
+    public void setUserBirth(Long userBirth) {
         this.userBirth = userBirth;
     }
 

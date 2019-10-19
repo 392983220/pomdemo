@@ -10,7 +10,7 @@
     <result column="order_id" jdbcType="BIGINT" property="orderId" />
     <result column="order_number" jdbcType="VARCHAR" property="orderNumber" />
     <result column="product_name" jdbcType="VARCHAR" property="productName" />
-    <result column="bought_time" jdbcType="VARCHAR" property="boughtTime" />
+    <result column="bought_time" jdbcType="BIGINT" property="boughtTime" />
     <result column="product_price" jdbcType="INTEGER" property="productPrice" />
     <result column="buy_quantity" jdbcType="INTEGER" property="buyQuantity" />
     <result column="order_assessment" jdbcType="INTEGER" property="orderAssessment" />
@@ -21,6 +21,7 @@
     <result column="take_delivery_address" jdbcType="VARCHAR" property="takeDeliveryAddress" />
     <result column="take_delivery_phone" jdbcType="INTEGER" property="takeDeliveryPhone" />
     <result column="user_phone" jdbcType="INTEGER" property="userPhone" />
+    <result column="product_color" jdbcType="VARCHAR" property="productColor" />
   </resultMap>
   <sql id="Base_Column_List">
     <!--
@@ -29,7 +30,7 @@
     -->
     recycle_id, order_id, order_number, product_name, bought_time, product_price, buy_quantity, 
     order_assessment, order_state, product_img, product_id, take_delivery_name, take_delivery_address, 
-    take_delivery_phone, user_phone
+    take_delivery_phone, user_phone, product_color
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
     <!--
@@ -59,13 +60,13 @@
       buy_quantity, order_assessment, order_state, 
       product_img, product_id, take_delivery_name, 
       take_delivery_address, take_delivery_phone, 
-      user_phone)
+      user_phone, product_color)
     values (#{recycleId,jdbcType=BIGINT}, #{orderId,jdbcType=BIGINT}, #{orderNumber,jdbcType=VARCHAR}, 
-      #{productName,jdbcType=VARCHAR}, #{boughtTime,jdbcType=VARCHAR}, #{productPrice,jdbcType=INTEGER}, 
+      #{productName,jdbcType=VARCHAR}, #{boughtTime,jdbcType=BIGINT}, #{productPrice,jdbcType=INTEGER}, 
       #{buyQuantity,jdbcType=INTEGER}, #{orderAssessment,jdbcType=INTEGER}, #{orderState,jdbcType=INTEGER}, 
       #{productImg,jdbcType=VARCHAR}, #{productId,jdbcType=BIGINT}, #{takeDeliveryName,jdbcType=VARCHAR}, 
       #{takeDeliveryAddress,jdbcType=VARCHAR}, #{takeDeliveryPhone,jdbcType=INTEGER}, 
-      #{userPhone,jdbcType=INTEGER})
+      #{userPhone,jdbcType=INTEGER}, #{productColor,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="goal.money.providerdemo.dto.Recycle">
     <!--
@@ -119,6 +120,9 @@
       <if test="userPhone != null">
         user_phone,
       </if>
+      <if test="productColor != null">
+        product_color,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="recycleId != null">
@@ -134,7 +138,7 @@
         #{productName,jdbcType=VARCHAR},
       </if>
       <if test="boughtTime != null">
-        #{boughtTime,jdbcType=VARCHAR},
+        #{boughtTime,jdbcType=BIGINT},
       </if>
       <if test="productPrice != null">
         #{productPrice,jdbcType=INTEGER},
@@ -166,6 +170,9 @@
       <if test="userPhone != null">
         #{userPhone,jdbcType=INTEGER},
       </if>
+      <if test="productColor != null">
+        #{productColor,jdbcType=VARCHAR},
+      </if>
     </trim>
   </insert>
   <update id="updateByPrimaryKeySelective" parameterType="goal.money.providerdemo.dto.Recycle">
@@ -185,7 +192,7 @@
         product_name = #{productName,jdbcType=VARCHAR},
       </if>
       <if test="boughtTime != null">
-        bought_time = #{boughtTime,jdbcType=VARCHAR},
+        bought_time = #{boughtTime,jdbcType=BIGINT},
       </if>
       <if test="productPrice != null">
         product_price = #{productPrice,jdbcType=INTEGER},
@@ -217,6 +224,9 @@
       <if test="userPhone != null">
         user_phone = #{userPhone,jdbcType=INTEGER},
       </if>
+      <if test="productColor != null">
+        product_color = #{productColor,jdbcType=VARCHAR},
+      </if>
     </set>
     where recycle_id = #{recycleId,jdbcType=BIGINT}
   </update>
@@ -229,7 +239,7 @@
     set order_id = #{orderId,jdbcType=BIGINT},
       order_number = #{orderNumber,jdbcType=VARCHAR},
       product_name = #{productName,jdbcType=VARCHAR},
-      bought_time = #{boughtTime,jdbcType=VARCHAR},
+      bought_time = #{boughtTime,jdbcType=BIGINT},
       product_price = #{productPrice,jdbcType=INTEGER},
       buy_quantity = #{buyQuantity,jdbcType=INTEGER},
       order_assessment = #{orderAssessment,jdbcType=INTEGER},
@@ -239,7 +249,8 @@
       take_delivery_name = #{takeDeliveryName,jdbcType=VARCHAR},
       take_delivery_address = #{takeDeliveryAddress,jdbcType=VARCHAR},
       take_delivery_phone = #{takeDeliveryPhone,jdbcType=INTEGER},
-      user_phone = #{userPhone,jdbcType=INTEGER}
+      user_phone = #{userPhone,jdbcType=INTEGER},
+      product_color = #{productColor,jdbcType=VARCHAR}
     where recycle_id = #{recycleId,jdbcType=BIGINT}
   </update>
 </mapper>
