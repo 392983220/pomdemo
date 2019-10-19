@@ -42,6 +42,15 @@ public class PhoneAndPwdController {
             if (userInfo != null) {
                 if (password.equals(userInfo.getPassword())) {
                     redisUtils.set(UserContant.Phone_PWD_NAME_SPACE + phone, userInfo, 60 * 300);
+                    if (userInfoService.queryUserLevel(phone)==0){
+                        userInfoService.updateExperience(phone,10);
+                        int experience=userInfoService.queryExperience(phone);
+                        int experienceLevel=userInfoService.experienceTransformLevel(experience);
+                        userInfoService.updateExperienceLevel(phone,experienceLevel);
+                        if (experience>=180){
+                            userInfoService.updateUserLevel(phone);
+                        }
+                    }
                     return userInfo.toString();
                 } else {
                     return "用户名或密码不对";

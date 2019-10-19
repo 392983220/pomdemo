@@ -61,4 +61,16 @@ public interface UserInfoMapper {
     void inserPhoneAndPwd(@Param("phone") int phone,@Param("password") String password);
 
     void updatePersonalInfo(UserInfo userInfo);
+
+    int queryUserLevel(int phone);
+
+    void updateExperience(@Param("phone")int phone,@Param("experience")int experience);
+
+    int queryExperience(int phone);
+
+    void updateExperienceLevel(@Param("phone") int phone,@Param("experienceLevel")int experienceLevel);
+
+    void updateUserLevel(int phone);
+
+    void updateBirth(UserInfo userInfo);
 }

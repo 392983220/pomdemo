@@ -8,12 +8,14 @@ import goal.money.consumerdemo.custom.CurrentUser;
 import goal.money.consumerdemo.custom.LoginRequired;
 import goal.money.consumerdemo.utils.RedisUtils;
 import goal.money.consumerdemo.utils.UrlUtils;
+import goal.money.consumerdemo.vo.PersonalInfo;
 import goal.money.consumerdemo.vo.UserVo;
 import goal.money.consumerdemo.wx.WxReq;
 import goal.money.providerdemo.dto.UserInfo;
 import goal.money.providerdemo.service.UserInfoService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -63,13 +65,40 @@ public class WxController {
     @ResponseBody
     @GetMapping(value = "bindPhone")
     @LoginRequired
-    public String bindPhone(int phone ,@CurrentUser UserVo userVo){
-        if (null== userInfoService.queryByPhone(phone)){
-            userInfoService.bindPhone(phone,userVo.getOpenid());
+    public String bindPhone(int phone, @CurrentUser UserVo userVo) {
+        if (null == userInfoService.queryByPhone(phone)) {
+            userInfoService.bindPhone(phone, userVo.getOpenid());
+            if (userInfoService.queryUserLevel(phone) == 0) {
+                userInfoService.updateExperience(phone, 10);
+                int experience = userInfoService.queryExperience(phone);
+                int experienceLevel = userInfoService.experienceTransformLevel(experience);
+                userInfoService.updateExperienceLevel(phone, experienceLevel);
+                if (experience >= 180) {
+                    userInfoService.updateUserLevel(phone);
+                }
+            }
             return "绑定成功";
-        }else {
+        } else {
             return "该手机号已被用过";
         }
+    }
+
+    @ResponseBody
+    @GetMapping(value = "updatePersonalInfo")
+    @LoginRequired
+    public String updatePersonalInfo(@CurrentUser UserVo userVo, PersonalInfo personalInfo) {
+        userVo.setNickname(personalInfo.getNickname());
+        userVo.setSex(personalInfo.getSex());
+        UserInfo userInfo = new UserInfo();
+        BeanUtils.copyProperties(userVo, userInfo);
+        userInfoService.updatePersonalInfo(userInfo);
+        if (userVo.getBirthIsUpdate() == 0) {
+            userVo.setUserBirth(personalInfo.getBirth());
+            userInfoService.updateBirth(userInfo);
+        } else {
+            return "出生日期已修改过，不能再次修改";
+        }
+        return "修改成功";
     }
 
 }

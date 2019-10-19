@@ -2,21 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98438fe6-443a-4d6c-b0d3-9e70ab8f77d5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/aop/HaHa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0cfd9a73-c54c-4775-b64f-c9e8c9951bda.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1dd9209c-c310-4e8e-8e6f-a23db5e5ecf0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7ae3d0bc-9c53-4404-8570-6d7dfba2bed2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8891cb6b-8aa5-4c1f-8a32-50e21ed91583.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/controller/PhoneAndPwdController.java" beforeDir="false" afterPath="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/controller/PhoneAndPwdController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/controller/WxPayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/controller/WxPayController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/utils/UrlUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/utils/UrlUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/dto/OrderInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/dto/OrderInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/dto/Recycle.java" beforeDir="false" afterPath="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/dto/Recycle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/dto/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/dto/UserInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/OrderInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/OrderInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/RecycleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/RecycleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/controller/WxController.java" beforeDir="false" afterPath="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/controller/WxController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/vo/UserVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/vo/UserVo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/UserInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/UserInfoMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/UserInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/UserInfoMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/service/UserInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/service/UserInfoService.java" afterDir="false" />
@@ -54,20 +43,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/controller/WxPayController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
+            <state relative-caret-position="381">
               <caret line="67" column="70" selection-start-line="67" selection-start-column="70" selection-end-line="67" selection-end-column="70" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/service/OrderInfoService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -78,8 +55,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/controller/PhoneAndPwdController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="43" column="97" selection-start-line="43" selection-start-column="97" selection-end-line="43" selection-end-column="97" />
+            <state relative-caret-position="514">
+              <caret line="52" column="21" lean-forward="true" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -90,7 +67,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/controller/OrderController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
+            <state relative-caret-position="722">
               <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -102,17 +79,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/UserInfoMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="321" selection-start-line="321" selection-end-line="321" />
+            <state relative-caret-position="1825">
+              <caret line="321" column="30" selection-start-line="321" selection-start-column="30" selection-end-line="321" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/providerdemo/src/main/resources/generatorConfig.xml">
+        <entry file="file://$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/vo/PersonalInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="45" column="76" selection-start-line="45" selection-start-column="76" selection-end-line="45" selection-end-column="76" />
+            <state relative-caret-position="380">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
             </state>
           </provider>
         </entry>
@@ -120,20 +97,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/UserInfoMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="56" column="22" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/controller/WxController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+            <state relative-caret-position="267">
+              <caret line="64" column="34" lean-forward="true" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -144,8 +109,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/OrderInfoMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="58" column="37" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
+            <state relative-caret-position="229">
+              <caret line="54" column="26" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -154,10 +119,40 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/OrderInfoMapper.xml">
+        <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/service/impl/UserInfoServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="245" column="67" lean-forward="true" selection-start-line="245" selection-start-column="67" selection-end-line="245" selection-end-column="67" />
+            <state relative-caret-position="438">
+              <caret line="79" column="43" selection-start-line="79" selection-start-column="43" selection-end-line="79" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#765#766#0" expanded="true" />
+                <element signature="e#820#821#0" expanded="true" />
+                <element signature="e#2007#2008#0" expanded="true" />
+                <element signature="e#2060#2061#0" expanded="true" />
+                <element signature="e#2124#2125#0" expanded="true" />
+                <element signature="e#2153#2154#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/service/UserInfoService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="551">
+              <caret line="29" column="40" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/controller/WxController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="305">
+              <caret line="88" column="93" selection-start-line="88" selection-start-column="93" selection-end-line="88" selection-end-column="93" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -193,7 +188,6 @@
         <option value="$PROJECT_DIR$/providerdemo/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/wx/WxReq.java" />
         <option value="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/config/webConfiguration.java" />
-        <option value="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/vo/UserVo.java" />
         <option value="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/custom/LoginReqComplete.java" />
         <option value="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/custom/CurrentComplete.java" />
         <option value="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/contants/UserContant.java" />
@@ -212,23 +206,25 @@
         <option value="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/testAop/Aop.java" />
         <option value="$PROJECT_DIR$/consumerdemo/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/aop/UserAop.java" />
-        <option value="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/controller/WxController.java" />
         <option value="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/service/OrderInfoService.java" />
         <option value="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/service/impl/OrderInfoServiceImpl.java" />
         <option value="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/controller/OrderController.java" />
         <option value="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/dto/OrderInfo.java" />
         <option value="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/utils/UrlUtils.java" />
-        <option value="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/service/UserInfoService.java" />
-        <option value="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/service/impl/UserInfoServiceImpl.java" />
         <option value="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/dto/Recycle.java" />
         <option value="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/dto/UserInfo.java" />
-        <option value="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/UserInfoMapper.java" />
         <option value="$PROJECT_DIR$/providerdemo/src/main/resources/generatorConfig.xml" />
         <option value="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/OrderInfoMapper.java" />
         <option value="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/OrderInfoMapper.xml" />
         <option value="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/controller/WxPayController.java" />
-        <option value="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/UserInfoMapper.xml" />
+        <option value="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/vo/PersonalInfo.java" />
         <option value="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/controller/PhoneAndPwdController.java" />
+        <option value="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/vo/UserVo.java" />
+        <option value="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/UserInfoMapper.xml" />
+        <option value="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/service/UserInfoService.java" />
+        <option value="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/service/impl/UserInfoServiceImpl.java" />
+        <option value="$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/controller/WxController.java" />
+        <option value="$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/UserInfoMapper.java" />
       </list>
     </option>
   </component>
@@ -268,8 +264,8 @@
     <option name="vmOptions" value="-DarchetypeCatalog=internal" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="240" />
-    <option name="y" value="-20" />
+    <option name="x" value="241" />
+    <option name="y" value="-19" />
     <option name="width" value="1420" />
     <option name="height" value="890" />
   </component>
@@ -605,7 +601,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pommodel" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -679,7 +675,7 @@
       <workItem from="1571319438979" duration="3516000" />
       <workItem from="1571361100027" duration="15682000" />
       <workItem from="1571398241322" duration="4046000" />
-      <workItem from="1571444325553" duration="3071000" />
+      <workItem from="1571444325553" duration="11162000" />
     </task>
     <task id="LOCAL-00001" summary="框架">
       <created>1571221501265</created>
@@ -730,11 +726,18 @@
       <option name="project" value="LOCAL" />
       <updated>1571370055603</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="登陆模块、微信支付流程已经跑通">
+      <created>1571448316775</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1571448316775</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63858000" />
+    <option name="totallyTimeSpent" value="71949000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -747,6 +750,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="Capture Tool" order="1" />
@@ -818,18 +822,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/service/impl/RecycleServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="53" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#268#269#0" expanded="true" />
-            <element signature="e#292#293#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/config/MybatisConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -1045,13 +1037,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/vo/PageVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/utils/WXPayXmlUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="365">
@@ -1119,31 +1104,6 @@
     <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/META-INF/MANIFEST.MF">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/vo/UserVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/service/impl/UserInfoServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="40" column="50" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#765#766#0" expanded="true" />
-            <element signature="e#819#820#0" expanded="true" />
-            <element signature="e#880#881#0" expanded="true" />
-            <element signature="e#937#938#0" expanded="true" />
-            <element signature="e#1015#1016#0" expanded="true" />
-            <element signature="e#1078#1079#0" expanded="true" />
-            <element signature="e#1149#1150#0" expanded="true" />
-            <element signature="e#1208#1209#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/testAop/Aop.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -1175,104 +1135,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/dto/UserInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
-          <folding>
-            <element signature="e#3844#3845#0" expanded="true" />
-            <element signature="e#3873#3874#0" expanded="true" />
-            <element signature="e#4150#4151#0" expanded="true" />
-            <element signature="e#4186#4187#0" expanded="true" />
-            <element signature="e#4446#4447#0" expanded="true" />
-            <element signature="e#4474#4475#0" expanded="true" />
-            <element signature="e#4747#4748#0" expanded="true" />
-            <element signature="e#4781#4782#0" expanded="true" />
-            <element signature="e#5049#5050#0" expanded="true" />
-            <element signature="e#5080#5081#0" expanded="true" />
-            <element signature="e#5367#5368#0" expanded="true" />
-            <element signature="e#5407#5408#0" expanded="true" />
-            <element signature="e#5669#5670#0" expanded="true" />
-            <element signature="e#5698#5699#0" expanded="true" />
-            <element signature="e#5975#5976#0" expanded="true" />
-            <element signature="e#6011#6012#0" expanded="true" />
-            <element signature="e#6279#6280#0" expanded="true" />
-            <element signature="e#6310#6311#0" expanded="true" />
-            <element signature="e#6597#6598#0" expanded="true" />
-            <element signature="e#6637#6638#0" expanded="true" />
-            <element signature="e#6891#6892#0" expanded="true" />
-            <element signature="e#6917#6918#0" expanded="true" />
-            <element signature="e#7180#7181#0" expanded="true" />
-            <element signature="e#7210#7211#0" expanded="true" />
-            <element signature="e#7478#7479#0" expanded="true" />
-            <element signature="e#7509#7510#0" expanded="true" />
-            <element signature="e#7796#7797#0" expanded="true" />
-            <element signature="e#7836#7837#0" expanded="true" />
-            <element signature="e#8092#8093#0" expanded="true" />
-            <element signature="e#8119#8120#0" expanded="true" />
-            <element signature="e#8386#8387#0" expanded="true" />
-            <element signature="e#8418#8419#0" expanded="true" />
-            <element signature="e#8686#8687#0" expanded="true" />
-            <element signature="e#8717#8718#0" expanded="true" />
-            <element signature="e#9004#9005#0" expanded="true" />
-            <element signature="e#9044#9045#0" expanded="true" />
-            <element signature="e#9318#9319#0" expanded="true" />
-            <element signature="e#9351#9352#0" expanded="true" />
-            <element signature="e#9648#9649#0" expanded="true" />
-            <element signature="e#9692#9693#0" expanded="true" />
-            <element signature="e#9984#9985#0" expanded="true" />
-            <element signature="e#10022#10023#0" expanded="true" />
-            <element signature="e#10347#10348#0" expanded="true" />
-            <element signature="e#10401#10402#0" expanded="true" />
-            <element signature="e#10676#10677#0" expanded="true" />
-            <element signature="e#10709#10710#0" expanded="true" />
-            <element signature="e#11007#11008#0" expanded="true" />
-            <element signature="e#11051#11052#0" expanded="true" />
-            <element signature="e#11343#11344#0" expanded="true" />
-            <element signature="e#11381#11382#0" expanded="true" />
-            <element signature="e#11706#11707#0" expanded="true" />
-            <element signature="e#11760#11761#0" expanded="true" />
-            <element signature="e#12034#12035#0" expanded="true" />
-            <element signature="e#12066#12067#0" expanded="true" />
-            <element signature="e#12361#12362#0" expanded="true" />
-            <element signature="e#12403#12404#0" expanded="true" />
-            <element signature="e#12674#12675#0" expanded="true" />
-            <element signature="e#12706#12707#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/service/UserInfoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/UserInfoMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="56" column="22" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/providerdemo/src/main/resources/generatorConfig.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="45" column="76" selection-start-line="45" selection-start-column="76" selection-end-line="45" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/OrderInfoMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="58" column="37" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1291,15 +1157,108 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/OrderInfoMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="245" column="67" lean-forward="true" selection-start-line="245" selection-start-column="67" selection-end-line="245" selection-end-column="67" />
+        <state relative-caret-position="438">
+          <caret line="273" column="13" lean-forward="true" selection-start-line="273" selection-start-column="13" selection-end-line="273" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/controller/WxController.java">
+    <entry file="file://$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/vo/PageVo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        <state relative-caret-position="76">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/dto/UserInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="155" selection-start-line="155" selection-end-line="155" />
+          <folding>
+            <element signature="e#10401#10402#0" expanded="true" />
+            <element signature="e#10455#10456#0" expanded="true" />
+            <element signature="e#11760#11761#0" expanded="true" />
+            <element signature="e#11814#11815#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/vo/UserVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="35" column="27" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
+          <folding>
+            <element signature="e#672#673#0" expanded="true" />
+            <element signature="e#701#702#0" expanded="true" />
+            <element signature="e#743#744#0" expanded="true" />
+            <element signature="e#779#780#0" expanded="true" />
+            <element signature="e#812#813#0" expanded="true" />
+            <element signature="e#840#841#0" expanded="true" />
+            <element signature="e#883#884#0" expanded="true" />
+            <element signature="e#917#918#0" expanded="true" />
+            <element signature="e#952#953#0" expanded="true" />
+            <element signature="e#983#984#0" expanded="true" />
+            <element signature="e#1031#1032#0" expanded="true" />
+            <element signature="e#1071#1072#0" expanded="true" />
+            <element signature="e#1104#1105#0" expanded="true" />
+            <element signature="e#1133#1134#0" expanded="true" />
+            <element signature="e#1177#1178#0" expanded="true" />
+            <element signature="e#1213#1214#0" expanded="true" />
+            <element signature="e#1248#1249#0" expanded="true" />
+            <element signature="e#1279#1280#0" expanded="true" />
+            <element signature="e#1327#1328#0" expanded="true" />
+            <element signature="e#1367#1368#0" expanded="true" />
+            <element signature="e#1398#1399#0" expanded="true" />
+            <element signature="e#1424#1425#0" expanded="true" />
+            <element signature="e#1463#1464#0" expanded="true" />
+            <element signature="e#1493#1494#0" expanded="true" />
+            <element signature="e#1528#1529#0" expanded="true" />
+            <element signature="e#1559#1560#0" expanded="true" />
+            <element signature="e#1607#1608#0" expanded="true" />
+            <element signature="e#1647#1648#0" expanded="true" />
+            <element signature="e#1678#1679#0" expanded="true" />
+            <element signature="e#1705#1706#0" expanded="true" />
+            <element signature="e#1745#1746#0" expanded="true" />
+            <element signature="e#1777#1778#0" expanded="true" />
+            <element signature="e#1812#1813#0" expanded="true" />
+            <element signature="e#1843#1844#0" expanded="true" />
+            <element signature="e#1891#1892#0" expanded="true" />
+            <element signature="e#1931#1932#0" expanded="true" />
+            <element signature="e#1968#1969#0" expanded="true" />
+            <element signature="e#2001#2002#0" expanded="true" />
+            <element signature="e#2053#2054#0" expanded="true" />
+            <element signature="e#2097#2098#0" expanded="true" />
+            <element signature="e#2140#2141#0" expanded="true" />
+            <element signature="e#2178#2179#0" expanded="true" />
+            <element signature="e#2241#2242#0" expanded="true" />
+            <element signature="e#2295#2296#0" expanded="true" />
+            <element signature="e#2333#2334#0" expanded="true" />
+            <element signature="e#2366#2367#0" expanded="true" />
+            <element signature="e#2419#2420#0" expanded="true" />
+            <element signature="e#2463#2464#0" expanded="true" />
+            <element signature="e#2506#2507#0" expanded="true" />
+            <element signature="e#2544#2545#0" expanded="true" />
+            <element signature="e#2607#2608#0" expanded="true" />
+            <element signature="e#2661#2662#0" expanded="true" />
+            <element signature="e#2698#2699#0" expanded="true" />
+            <element signature="e#2730#2731#0" expanded="true" />
+            <element signature="e#2781#2782#0" expanded="true" />
+            <element signature="e#2823#2824#0" expanded="true" />
+            <element signature="e#2857#2858#0" expanded="true" />
+            <element signature="e#2889#2890#0" expanded="true" />
+            <element signature="e#2937#2938#0" expanded="true" />
+            <element signature="e#2979#2980#0" expanded="true" />
+            <element signature="e#3020#3021#0" expanded="true" />
+            <element signature="e#3056#3057#0" expanded="true" />
+            <element signature="e#3115#3116#0" expanded="true" />
+            <element signature="e#3165#3166#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/controller/OrderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="722">
+          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1308,7 +1267,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/controller/WxPayController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
+        <state relative-caret-position="381">
           <caret line="67" column="70" selection-start-line="67" selection-start-column="70" selection-end-line="67" selection-end-column="70" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1316,10 +1275,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/controller/OrderController.java">
+    <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/service/UserInfoService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+        <state relative-caret-position="551">
+          <caret line="29" column="40" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/service/impl/UserInfoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="79" column="43" selection-start-line="79" selection-start-column="43" selection-end-line="79" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#765#766#0" expanded="true" />
+            <element signature="e#820#821#0" expanded="true" />
+            <element signature="e#2007#2008#0" expanded="true" />
+            <element signature="e#2060#2061#0" expanded="true" />
+            <element signature="e#2124#2125#0" expanded="true" />
+            <element signature="e#2153#2154#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/controller/WxController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="88" column="93" selection-start-line="88" selection-start-column="93" selection-end-line="88" selection-end-column="93" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/UserInfoMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="64" column="34" lean-forward="true" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/OrderInfoMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="54" column="26" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1328,15 +1330,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/providerdemo/src/main/java/goal/money/providerdemo/mapper/UserInfoMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="321" selection-start-line="321" selection-end-line="321" />
+        <state relative-caret-position="1825">
+          <caret line="321" column="30" selection-start-line="321" selection-start-column="30" selection-end-line="321" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/vo/PersonalInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/consumerdemo/src/main/java/goal/money/consumerdemo/controller/PhoneAndPwdController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="43" column="97" selection-start-line="43" selection-start-column="97" selection-end-line="43" selection-end-column="97" />
+        <state relative-caret-position="514">
+          <caret line="52" column="21" lean-forward="true" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

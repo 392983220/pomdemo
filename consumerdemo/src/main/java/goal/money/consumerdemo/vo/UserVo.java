@@ -5,21 +5,45 @@ import java.util.Date;
 
 public class UserVo implements Serializable {
 
+    private Long userId;
+
     private Integer phone;
+
     private String password;
+
     private String openid;
+
     private String nickname;
+
     private Integer sex;
+
     private String language;
+
     private String city;
+
     private String province;
+
     private String headimgurl;
+
     private Integer accumulatePoint;
+
     private Integer experience;
+
     private Integer experienceLevel;
+
     private Integer userLevel;
-    private Date userBirth;
+
+    private Long userBirth;
+
     private Integer birthIsUpdate;
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
 
     public Integer getPhone() {
         return phone;
@@ -125,11 +149,11 @@ public class UserVo implements Serializable {
         this.userLevel = userLevel;
     }
 
-    public Date getUserBirth() {
+    public Long getUserBirth() {
         return userBirth;
     }
 
-    public void setUserBirth(Date userBirth) {
+    public void setUserBirth(Long userBirth) {
         this.userBirth = userBirth;
     }
 

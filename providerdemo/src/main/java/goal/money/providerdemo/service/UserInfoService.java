@@ -15,4 +15,18 @@ public interface UserInfoService {
 
     void updatePersonalInfo(UserInfo userInfo);
 
+    int queryUserLevel(int phone);
+
+    void updateExperience(int phone,int experience);
+
+    int queryExperience(int phone);
+
+     int experienceTransformLevel(int experience);
+
+    void updateExperienceLevel(int phone,int experienceLevel);
+
+    void updateUserLevel(int phone);
+
+    void updateBirth(UserInfo userInfo);
+
 }
