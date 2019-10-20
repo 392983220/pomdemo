@@ -6,6 +6,7 @@ import goal.money.consumerdemo.custom.LoginRequired;
 import goal.money.consumerdemo.utils.result.ProductReturn;
 import goal.money.consumerdemo.utils.result.ReturnResult;
 import goal.money.consumerdemo.utils.result.ReturnResultUtil;
+import goal.money.consumerdemo.vo.PageVo;
 import goal.money.consumerdemo.vo.ProductInfoVo;
 import goal.money.consumerdemo.vo.UserVo;
 import goal.money.providerdemo.dto.CartInfo;
@@ -18,6 +19,7 @@ import goal.money.providerdemo.service.ProductService;
 import goal.money.providerdemo.service.UserInfoService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.BeanUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -48,6 +50,24 @@ public class ProductController {
     @Reference
     private CartService cartService;
 
+
+    @ApiOperation(value = "首页商品展示")
+    @GetMapping(value = "showIndex")
+    public ReturnResult showIndex(String productCategory, PageVo pageVo){
+        return ReturnResultUtil.returnSuccessData(1,"首页商品展示",productService.showIndexProductList(productCategory,pageVo.getStartPage(),pageVo.getPageSize()));
+    }
+
+    @ApiOperation(value = "根据商品名称模糊查询展示商品")
+    @GetMapping(value = "showProductsByName")
+    public ReturnResult showProductsByName(String productName,String productCategory ){
+        return ReturnResultUtil.returnSuccessData(1,"根据商品名称模糊查询展示商品",productService.queryProductListByName(productName,productCategory));
+    }
+
+    @ApiOperation(value = "搜索框内默认商品")
+    @GetMapping(value = "defaultProduct")
+    public ReturnResult defaultProduct(){
+            return ReturnResultUtil.returnSuccessData(1,"搜索框内默认商品",productService.defaultProduct());
+    }
 
     @ApiOperation(value = "登陆状态商品选购")
     @GetMapping(value = "loginChooseGoods")

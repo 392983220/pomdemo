@@ -221,6 +221,18 @@
 <select id="queryProductByNameAndColor" resultMap="BaseResultMap">
   select * from product_info where product_name=#{productName} and product_color=#{productColor}
 </select>
+  
+  <select id="queryProductListByName"  resultMap="BaseResultMap">
+    select * from product_info where product_name like concat('%',#{productName},'%') and product_category=#{productCategory} order by listing_time desc ,sale_quantity desc
+  </select>
+
+  <select id="showIndexProductList" resultMap="BaseResultMap">
+    select * from product_info where product_category=#{productCategory} order by listing_time desc ,sale_quantity desc limit #{startPage},#{pageSize}
+  </select>
+
+  <select id="defaultProduct" resultMap="BaseResultMap">
+    select * from product_info order by sale_quantity desc,listing_time desc limit 0,1
+  </select>
 
 
 </mapper>

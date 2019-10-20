@@ -405,4 +405,28 @@ public class ProductInfo implements Serializable {
     public void setGoodRate(Double goodRate) {
         this.goodRate = goodRate;
     }
+
+    private int startPage;
+    private int  pageSize;
+
+
+    public int getStartPage() {
+        return startPage;
+    }
+
+    public void setStartPage(int startPage) {
+        int i=1;
+        if (startPage>=1){
+            this.startPage = (startPage-1)*pageSize;
+        }
+        this.startPage=0;
+    }
+
+    public int getPageSize() {
+        return pageSize;
+    }
+
+    public void setPageSize(int pageSize) {
+        this.pageSize = pageSize;
+    }
 }

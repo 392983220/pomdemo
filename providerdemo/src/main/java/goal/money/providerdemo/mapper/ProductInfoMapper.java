@@ -1,6 +1,9 @@
 package goal.money.providerdemo.mapper;
 
 import goal.money.providerdemo.dto.ProductInfo;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface ProductInfoMapper {
     /**
@@ -56,4 +59,10 @@ public interface ProductInfoMapper {
     int queryQuantity(Long productId);
 
     ProductInfo queryProductByNameAndColor(String productName,String productColor);
+
+    List<ProductInfo> queryProductListByName(@Param("productName") String productName,@Param("productCategory") String productCategory);
+
+    List<ProductInfo>  showIndexProductList(@Param("productCategory")String productCategory,@Param("startPage")int startPage,@Param("pageSize")int pageSize);
+
+    ProductInfo defaultProduct();
 }

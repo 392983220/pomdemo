@@ -6,6 +6,8 @@ import goal.money.providerdemo.mapper.ProductInfoMapper;
 import goal.money.providerdemo.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.List;
+
 /**
  * @version 1.0
  * @Author 张深
@@ -34,5 +36,20 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public ProductInfo queryProductByNameAndColor(String productName, String productColor) {
         return productInfoMapper.queryProductByNameAndColor(productName,productColor);
+    }
+
+    @Override
+    public List<ProductInfo> queryProductListByName(String productName,String productCategory) {
+        return productInfoMapper.queryProductListByName(productName,productCategory);
+    }
+
+    @Override
+    public List<ProductInfo> showIndexProductList(String productCategory,int startPage,int pageSize) {
+        return productInfoMapper.showIndexProductList(productCategory,startPage,pageSize);
+    }
+
+    @Override
+    public ProductInfo defaultProduct() {
+        return productInfoMapper.defaultProduct();
     }
 }
