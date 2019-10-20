@@ -67,7 +67,7 @@ public class ProductController {
         return cartService.selectCartList(userVo.getUserId());
     }
 
-    @ApiOperation(value = "商品选购")
+    @ApiOperation(value = "未登录商品选购")
     @GetMapping(value = "unLoginChooseGoods")
     public Map<String,CartInfo> unLoginChooseGoods(HttpServletRequest request, long productId, int buyQuantity, String color) {
         CartInfo cartInfo = new CartInfo();
@@ -84,6 +84,23 @@ public class ProductController {
         map.put(String.valueOf(productId),cartInfo);
         session.setAttribute("carts",map);
         return map;
+    }
+
+    @ApiOperation(value = "未登录状态下商品详情")
+    @GetMapping(value = "unLoginProductDetail")
+    public ProductInfo unLoginProductDetail(String  productName,String productColor){
+        ProductInfo productInfo=productService.queryProductByNameAndColor(productName,productColor);
+/*productInfo.setGoodRate( (1.0*productInfo.getProductScore())/(productInfo.getSaleQuantity()*10));*/
+        return productInfo;
+    }
+
+    @ApiOperation(value = "登陆状态下商品详情")
+    @GetMapping(value = "loginProductDetail")
+    @LoginRequired
+    public ProductInfo loginProductDetail(@CurrentUser UserVo userVo,String  productName,String productColor){
+        ProductInfo productInfo=productService.queryProductByNameAndColor(productName,productColor);
+        int point=userInfoService.queryUserPoint(userVo.getPhone());
+        return productInfo;
     }
 
 }

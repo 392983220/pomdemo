@@ -13,4 +13,6 @@ public interface ProductService {
     int queryQuantity(Long productId);
 
     ProductInfo selectByPrimaryKey(Long productId);
+
+    ProductInfo queryProductByNameAndColor(String productName,String productColor);
 }

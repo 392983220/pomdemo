@@ -54,4 +54,6 @@ public interface ProductInfoMapper {
     ProductInfo selectGoods(Long productId);
 
     int queryQuantity(Long productId);
+
+    ProductInfo queryProductByNameAndColor(String productName,String productColor);
 }

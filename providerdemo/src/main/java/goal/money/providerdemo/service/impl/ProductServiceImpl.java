@@ -30,4 +30,9 @@ public class ProductServiceImpl implements ProductService {
     public ProductInfo selectByPrimaryKey(Long productId) {
         return productInfoMapper.selectByPrimaryKey(productId);
     }
+
+    @Override
+    public ProductInfo queryProductByNameAndColor(String productName, String productColor) {
+        return productInfoMapper.queryProductByNameAndColor(productName,productColor);
+    }
 }

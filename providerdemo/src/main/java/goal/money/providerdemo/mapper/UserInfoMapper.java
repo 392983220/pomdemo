@@ -74,4 +74,5 @@ public interface UserInfoMapper {
 
     void updateBirth(UserInfo userInfo);
 
+    int queryUserPoint(int phone);
 }

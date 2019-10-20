@@ -81,4 +81,9 @@ public class UserInfoServiceImpl implements UserInfoService {
     public void updateBirth(UserInfo userInfo) {
         userInfoMapper.updateBirth(userInfo);
     }
+
+    @Override
+    public int queryUserPoint(int phone) {
+        return userInfoMapper.queryUserPoint(phone);
+    }
 }

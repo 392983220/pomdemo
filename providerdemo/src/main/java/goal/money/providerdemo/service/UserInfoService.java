@@ -30,4 +30,6 @@ public interface UserInfoService {
 
     void updateBirth(UserInfo userInfo);
 
+    int queryUserPoint(int phone);
+
 }
