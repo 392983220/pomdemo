@@ -8,6 +8,8 @@ import goal.money.consumerdemo.custom.CurrentUser;
 import goal.money.consumerdemo.custom.LoginRequired;
 import goal.money.consumerdemo.utils.RedisUtils;
 import goal.money.consumerdemo.utils.UrlUtils;
+import goal.money.consumerdemo.utils.result.ReturnResult;
+import goal.money.consumerdemo.utils.result.ReturnResultUtil;
 import goal.money.consumerdemo.vo.PersonalInfo;
 import goal.money.consumerdemo.vo.UserVo;
 import goal.money.consumerdemo.wx.WxReq;
@@ -41,7 +43,7 @@ public class WxController {
 
     @ResponseBody
     @GetMapping(value = "callBack")
-    public String callBack(String code) {
+    public ReturnResult callBack(String code) {
         String resultJson = wxReq.accessToeknUrl(code);
         String resultJsonUrl = UrlUtils.loadURL(resultJson);
         JSONObject jsonObject = JSON.parseObject(resultJsonUrl);
@@ -53,19 +55,19 @@ public class WxController {
             int flag = userInfoService.insertSelective(userInfo);
             if (flag == 1) {
                 redisUtils.set(UserContant.NAME_SPACE + userInfo.getOpenid(), userInfo, 60 * 300);
-                return openid;
+                return ReturnResultUtil.returnSuccessData(1,"openid",openid);
             } else {
                 return null;
             }
         } else {
-            return "用户名已存在";
+            return ReturnResultUtil.returnFail(2,"用户名已存在");
         }
     }
 
     @ResponseBody
     @GetMapping(value = "bindPhone")
     @LoginRequired
-    public String bindPhone(String phone, @CurrentUser UserVo userVo) {
+    public ReturnResult bindPhone(String phone, @CurrentUser UserVo userVo) {
         if (null == userInfoService.queryByPhone(phone)) {
             userInfoService.bindPhone(phone, userVo.getOpenid());
             if (userInfoService.queryUserLevel(phone) == 0) {
@@ -77,16 +79,16 @@ public class WxController {
                     userInfoService.updateUserLevel(phone);
                 }
             }
-            return "绑定成功";
+            return ReturnResultUtil.returnSuccessData(1,"绑定成功",userInfoService.queryByPhone(phone));
         } else {
-            return "该手机号已被用过";
+            return ReturnResultUtil.returnFail(2,"改手机号已被注册");
         }
     }
 
     @ResponseBody
     @GetMapping(value = "updatePersonalInfo")
     @LoginRequired
-    public String updatePersonalInfo(@CurrentUser UserVo userVo, PersonalInfo personalInfo) {
+    public ReturnResult updatePersonalInfo(@CurrentUser UserVo userVo, PersonalInfo personalInfo) {
         userVo.setNickname(personalInfo.getNickname());
         userVo.setSex(personalInfo.getSex());
         UserInfo userInfo = new UserInfo();
@@ -96,9 +98,9 @@ public class WxController {
             userVo.setUserBirth(personalInfo.getBirth());
             userInfoService.updateBirth(userInfo);
         } else {
-            return "出生日期已修改过，不能再次修改";
+            return ReturnResultUtil.returnFail(2,"出生日期已修改过，不能再次修改");
         }
-        return "修改成功";
+        return ReturnResultUtil.returnSuccessData(1,"绑定成功",userInfoService.queryByPhone(userVo.getPhone()));
     }
 
 }

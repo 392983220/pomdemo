@@ -7,7 +7,7 @@ public class UserVo implements Serializable {
 
     private Long userId;
 
-    private Integer phone;
+    private String phone;
 
     private String password;
 
@@ -45,11 +45,11 @@ public class UserVo implements Serializable {
         this.userId = userId;
     }
 
-    public Integer getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(Integer phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 

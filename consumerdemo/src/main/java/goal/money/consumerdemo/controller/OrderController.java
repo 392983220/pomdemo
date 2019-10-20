@@ -1,6 +1,8 @@
 package goal.money.consumerdemo.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
+import goal.money.consumerdemo.utils.result.ReturnResult;
+import goal.money.consumerdemo.utils.result.ReturnResultUtil;
 import goal.money.consumerdemo.vo.PageVo;
 import goal.money.providerdemo.dto.OrderInfo;
 import goal.money.providerdemo.dto.Recycle;
@@ -23,47 +25,44 @@ public class OrderController {
 
     @GetMapping(value = "queryOrder")
     @ApiOperation(value = "查询订单")
-    public List<OrderInfo> queryOrder(PageVo pageVo, int orderState) {
-        return orderInfoService.queryByState(orderState, pageVo.getStartPage(), pageVo.getPageSize());
+    public ReturnResult<List<OrderInfo>> queryOrder(PageVo pageVo, int orderState) {
+        List<OrderInfo> orderInfos= orderInfoService.queryByState(orderState, pageVo.getStartPage(), pageVo.getPageSize());
+        return ReturnResultUtil.returnSuccessData(1,"查询订单",orderInfos);
     }
 
     @GetMapping(value = "deleteOrder")
     @ApiOperation(value = "删除订单")
-    public void deleteOrder(Long orderId) {
+    public ReturnResult<OrderInfo> deleteOrder(Long orderId) {
         OrderInfo orderInfo = orderInfoService.selectByPrimaryKey(orderId);
         Recycle recycle = new Recycle();
         BeanUtils.copyProperties(orderInfo, recycle);
         if (null != recycle.getOrderId()) {
             orderInfoService.deleteByPrimaryKey(orderId);
-        }
+            return ReturnResultUtil.returnSuccessData(1,"删除订单成功",orderInfo);
+        }return ReturnResultUtil.returnFail(2,"删除订单失败");
     }
 
     @GetMapping(value = "queryOrderByNumber")
     @ApiOperation("根据订单号模糊查询订单")
-    public List<OrderInfo> queryOrderByNumber(String orderNumber, int orderState) {
-        return orderInfoService.queryByNo(orderNumber, orderState);
+    public ReturnResult<List<OrderInfo>> queryOrderByNumber(String orderNumber, int orderState) {
+        return ReturnResultUtil.returnSuccessData(1,"根据订单号模糊查询订单",orderInfoService.queryByNo(orderNumber, orderState));
     }
 
     @GetMapping(value = "queryOrderByName")
     @ApiOperation("根据订单号模糊查询订单")
-    public List<OrderInfo> queryOrderByName(String orderName, int orderState) {
-        return orderInfoService.queryByName(orderName, orderState);
+    public ReturnResult<List<OrderInfo>> queryOrderByName(String orderName, int orderState) {
+        return ReturnResultUtil.returnSuccessData(1,"根据订单号模糊查询订单",orderInfoService.queryByName(orderName, orderState));
     }
 
     @GetMapping(value = "givePoint")
     @ApiOperation(value = "用户打分")
-    public String givePoint(OrderInfo orderInfo, int point) {
+    public ReturnResult<OrderInfo> givePoint(OrderInfo orderInfo, int point) {
         if (orderInfo.getOrderState() == 4) {
-            if (point != 9) {
                 orderInfo.setOrderAssessment(point);
                 orderInfoService.updateOrderAssessment(orderInfo);
-                //更改商品表中商品的总评分
-                return "感谢评价";
-            } else {
-                return null;
-            }
+                return ReturnResultUtil.returnSuccessData(1,"感谢评分",orderInfoService.selectByPrimaryKey(orderInfo.getOrderId()));
         } else {
-            return "暂时不能打分";
+            return ReturnResultUtil.returnFail(2,"订单暂时不能评价");
         }
     }
 }

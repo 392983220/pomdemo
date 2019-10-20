@@ -4,6 +4,8 @@ import com.alibaba.dubbo.config.annotation.Reference;
 import goal.money.consumerdemo.custom.CurrentUser;
 import goal.money.consumerdemo.custom.LoginRequired;
 import goal.money.consumerdemo.utils.RedisUtils;
+import goal.money.consumerdemo.utils.result.ReturnResult;
+import goal.money.consumerdemo.utils.result.ReturnResultUtil;
 import goal.money.consumerdemo.vo.UserVo;
 import goal.money.providerdemo.dto.CartInfo;
 import goal.money.providerdemo.service.CartService;
@@ -40,30 +42,30 @@ public class CartController {
 
     @ApiOperation(value = "展示未登录状态购物车")
     @GetMapping(value = "/showUnLoginCart")
-    public Map<String, CartInfo> showUnLoginCart(HttpServletRequest request) {
+    public ReturnResult<Map<String, CartInfo>> showUnLoginCart(HttpServletRequest request) {
         HttpSession session = request.getSession();
         Map<String, CartInfo> cartInfos = (Map<String, CartInfo>) session.getAttribute("carts");
         for (Map.Entry<String, CartInfo> entry : cartInfos.entrySet()) {
             cartService.updatePriceMultiplyQuantity(entry.getValue().getCartId());
         }
-        return cartInfos;
+       return ReturnResultUtil.returnSuccessData(1,"success",cartInfos);
     }
 
     @ApiOperation(value = "展示登录状态购物车")
     @GetMapping(value = "/showLoginCart")
     @LoginRequired
-    public List<CartInfo> showLoginCart(@CurrentUser UserVo userVo) {
+    public ReturnResult<Map<String, CartInfo>> showLoginCart(@CurrentUser UserVo userVo) {
         List<CartInfo> cartInfos = cartService.selectCartList(userVo.getUserId());
         for (CartInfo cartInfo : cartInfos) {
             cartService.updatePriceMultiplyQuantity(cartInfo.getCartId());
         }
-        return cartInfos;
+        return ReturnResultUtil.returnSuccessData(1,"success",cartInfos);
     }
 
     @ApiOperation(value = "修改登录状态的下的购物车商品数量")
     @GetMapping(value = "updateLoginBuyQuantity")
     @LoginRequired
-    public String updateLoginBuyQuantity(@CurrentUser UserVo userVo, Long productId, int buyQuantity) {
+    public  ReturnResult<CartInfo> updateLoginBuyQuantity(@CurrentUser UserVo userVo, Long productId, int buyQuantity) {
         CartInfo cartInfo = cartService.queryCart(userVo.getUserId(), productId);
         int productQuantity = productService.queryQuantity(cartInfo.getProductId());
         if (productQuantity >= buyQuantity) {
@@ -71,17 +73,17 @@ public class CartController {
             if (buyQuantity > 0) {
                 cartService.updatePriceMultiplyQuantity(cartInfo.getCartId());
                 CartInfo updatedCart = cartService.queryCartById(cartInfo.getCartId());
-                return null;
+                return ReturnResultUtil.returnSuccessData(1,"success",updatedCart);
             } else {
                 cartService.deleteByPrimaryKey(cartInfo.getCartId());
-                return null;
+                return ReturnResultUtil.returnSuccess(1,"商品已从购物车中删除");
             }
-        } else return "库存不足";
+        } else return ReturnResultUtil.returnFail(2,"库存不足");
     }
 
     @ApiOperation(value = "修改未登录状态的下的购物车商品数量")
     @GetMapping(value = "updateUnLoginBuyQuantity")
-    public String updateUnLoginBuyQuantity(HttpServletRequest request, long cartId, int buyQuantity) {
+    public  ReturnResult<CartInfo> updateUnLoginBuyQuantity(HttpServletRequest request, long cartId, int buyQuantity) {
         HttpSession session = request.getSession();
         Map<String, CartInfo> cartInfos = (Map<String, CartInfo>) session.getAttribute("carts");
         CartInfo cartInfo = new CartInfo();
@@ -95,27 +97,27 @@ public class CartController {
             if (buyQuantity > 0) {
                 cartService.updatePriceMultiplyQuantity(cartInfo.getCartId());
                 CartInfo updatedCart = cartService.queryCartById(cartInfo.getCartId());
-                return null;
+                return ReturnResultUtil.returnSuccessData(1,"success",updatedCart);
             } else {
                 cartService.deleteByPrimaryKey(cartInfo.getCartId());
-                return null;
+                return ReturnResultUtil.returnSuccess(1,"商品已从购物车中删除");
             }
-        } else return "库存不足";
+        } else return ReturnResultUtil.returnFail(2,"库存不足");
     }
 
     @ApiOperation(value = "登录用户删除购物车")
     @GetMapping(value = "/deleteLoginUserCart")
     @LoginRequired
-    public String deleteLoginUserCart(Long cartId, @CurrentUser UserVo userVo) {
+    public ReturnResult deleteLoginUserCart(Long cartId, @CurrentUser UserVo userVo) {
         if (1 == cartService.deleteByPrimaryKey(cartId)) {
-            return "删除成功";
+            return ReturnResultUtil.returnSuccess(1,"删除成功");
         }
-        return "删除失败";
+        return ReturnResultUtil.returnFail(2,"删除失败");
     }
 
     @ApiOperation(value = "登录用户删除购物车")
     @GetMapping(value = "/deleteUnLoginUserCart")
-    public Map<String, CartInfo> deleteUnLoginUserCart(HttpServletRequest request, long cartId) {
+    public ReturnResult<Map<String, CartInfo>> deleteUnLoginUserCart(HttpServletRequest request, long cartId) {
         HttpSession session = request.getSession();
         Map<String, CartInfo> cartInfos = (Map<String, CartInfo>) session.getAttribute("carts");
         Iterator<String> iter = cartInfos.keySet().iterator();
@@ -124,7 +126,7 @@ public class CartController {
             if (Integer.valueOf(key) == cartId) {
                 iter.remove();
             }
-        }return cartInfos;
+        }return ReturnResultUtil.returnSuccessData(1,"删除成功",cartInfos);
     }
 
 

@@ -3,6 +3,8 @@ package goal.money.consumerdemo.controller;
 import com.alibaba.dubbo.config.annotation.Reference;
 import goal.money.consumerdemo.contants.UserContant;
 import goal.money.consumerdemo.utils.RedisUtils;
+import goal.money.consumerdemo.utils.result.ReturnResult;
+import goal.money.consumerdemo.utils.result.ReturnResultUtil;
 import goal.money.providerdemo.dto.UserInfo;
 import goal.money.providerdemo.service.UserInfoService;
 import io.swagger.annotations.Api;
@@ -23,20 +25,20 @@ public class PhoneAndPwdController {
 
     @ApiOperation(value = "账号密码注册")
     @GetMapping(value = "PhoneAndPwdRegister")
-    public String PhoneAndPwdLogin(String phone, String password) {
+    public ReturnResult<UserInfo> PhoneAndPwdLogin(String phone, String password) {
         if (null == userInfoService.queryByPhone(phone)) {
             userInfoService.inserPhoneAndPwd(phone, password);
-            return "注册成功";
+            return ReturnResultUtil.returnSuccessData(1,"注册成功",userInfoService.queryByPhone(phone));
         } else {
-            return "手机号已存在";
+            return ReturnResultUtil.returnFail(2,"改手机号已被注册");
         }
     }
 
     @ApiOperation(value = "账号密码登陆")
     @GetMapping(value = "phoneAndPwdLogin")
-    public String phoneAndPwdLogin(String phone, String password, boolean isAccept) {
+    public ReturnResult<UserInfo> phoneAndPwdLogin(String phone, String password, boolean isAccept) {
         if (!isAccept) {
-            return "请点击我同意";
+            return ReturnResultUtil.returnFail(2,"请点击我同意");
         } else {
             UserInfo userInfo = userInfoService.queryByPhone(phone);
             if (userInfo != null) {
@@ -51,15 +53,14 @@ public class PhoneAndPwdController {
                             userInfoService.updateUserLevel(phone);
                         }
                     }
-                    return userInfo.toString();
+                    return ReturnResultUtil.returnSuccessData(1,"登陆成功",userInfo);
                 } else {
-                    return "用户名或密码不对";
+                    return ReturnResultUtil.returnFail(2,"用户名或密码不对");
                 }
             } else {
-                return "用户名不存在";
+                return ReturnResultUtil.returnFail(2,"用户名不存在");
             }
         }
     }
-
 
 }
