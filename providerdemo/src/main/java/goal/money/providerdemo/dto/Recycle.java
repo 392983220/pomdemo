@@ -134,7 +134,7 @@ public class Recycle implements Serializable {
      *
      * @mbg.generated
      */
-    private Integer takeDeliveryPhone;
+    private String takeDeliveryPhone;
 
     /**
      *
@@ -143,7 +143,7 @@ public class Recycle implements Serializable {
      *
      * @mbg.generated
      */
-    private Integer userPhone;
+    private String userPhone;
 
     /**
      *
@@ -483,7 +483,7 @@ public class Recycle implements Serializable {
      *
      * @mbg.generated
      */
-    public Integer getTakeDeliveryPhone() {
+    public String getTakeDeliveryPhone() {
         return takeDeliveryPhone;
     }
 
@@ -495,7 +495,7 @@ public class Recycle implements Serializable {
      *
      * @mbg.generated
      */
-    public void setTakeDeliveryPhone(Integer takeDeliveryPhone) {
+    public void setTakeDeliveryPhone(String takeDeliveryPhone) {
         this.takeDeliveryPhone = takeDeliveryPhone;
     }
 
@@ -507,7 +507,7 @@ public class Recycle implements Serializable {
      *
      * @mbg.generated
      */
-    public Integer getUserPhone() {
+    public String getUserPhone() {
         return userPhone;
     }
 
@@ -519,7 +519,7 @@ public class Recycle implements Serializable {
      *
      * @mbg.generated
      */
-    public void setUserPhone(Integer userPhone) {
+    public void setUserPhone(String userPhone) {
         this.userPhone = userPhone;
     }
 

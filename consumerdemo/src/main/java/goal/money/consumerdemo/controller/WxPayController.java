@@ -41,8 +41,8 @@ public class WxPayController {
     @GetMapping(value = "wxpay")
     @LoginRequired
     public String wxPay(OrderInfo orderInfo, @CurrentUser UserVo userVo) throws Exception {
-        if (orderInfo.getUserPhone() == userVo.getPhone() &&
-                orderInfo.getTakeDeliveryAddress() != null && orderInfo.getTakeDeliveryName() != null && orderInfo.getTakeDeliveryPhone() != 0)
+        if (orderInfo.getUserPhone().equals(userVo.getPhone())  &&
+                orderInfo.getTakeDeliveryAddress() != null && orderInfo.getTakeDeliveryName() != null && orderInfo.getTakeDeliveryPhone() != null)
             return wxApi.wxPay(orderInfo);
         else return "订单信息不完整";
     }

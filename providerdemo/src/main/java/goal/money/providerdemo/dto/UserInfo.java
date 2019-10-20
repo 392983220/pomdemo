@@ -26,7 +26,7 @@ public class UserInfo implements Serializable {
      *
      * @mbg.generated
      */
-    private Integer phone;
+    private String phone;
 
     /**
      *
@@ -186,7 +186,7 @@ public class UserInfo implements Serializable {
      *
      * @mbg.generated
      */
-    public Integer getPhone() {
+    public String getPhone() {
         return phone;
     }
 
@@ -198,7 +198,7 @@ public class UserInfo implements Serializable {
      *
      * @mbg.generated
      */
-    public void setPhone(Integer phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 

@@ -7,29 +7,29 @@ public interface UserInfoService {
 
     int insertSelective(UserInfo record);
 
-    void bindPhone(int phone,String openid);
+    void bindPhone(String phone,String openid);
 
-    UserInfo queryByPhone(int phone);
+    UserInfo queryByPhone(String phone);
 
-    void inserPhoneAndPwd(int phone,String password);
+    void inserPhoneAndPwd(String phone,String password);
 
     void updatePersonalInfo(UserInfo userInfo);
     //查userInfo表
 
-    int queryUserLevel(int phone);
+    int queryUserLevel(String phone);
 
-    void updateExperience(int phone,int experience);
+    void updateExperience(String phone,int experience);
 
-    int queryExperience(int phone);
+    int queryExperience(String phone);
 
      int experienceTransformLevel(int experience);
 
-    void updateExperienceLevel(int phone,int experienceLevel);
+    void updateExperienceLevel(String phone,int experienceLevel);
 
-    void updateUserLevel(int phone);
+    void updateUserLevel(String phone);
 
     void updateBirth(UserInfo userInfo);
 
-    int queryUserPoint(int phone);
+    int queryUserPoint(String phone);
 
 }

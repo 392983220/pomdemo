@@ -18,8 +18,8 @@
     <result column="product_id" jdbcType="BIGINT" property="productId" />
     <result column="take_delivery_name" jdbcType="VARCHAR" property="takeDeliveryName" />
     <result column="take_delivery_address" jdbcType="VARCHAR" property="takeDeliveryAddress" />
-    <result column="take_delivery_phone" jdbcType="INTEGER" property="takeDeliveryPhone" />
-    <result column="user_phone" jdbcType="INTEGER" property="userPhone" />
+    <result column="take_delivery_phone" jdbcType="VARCHAR" property="takeDeliveryPhone" />
+    <result column="user_phone" jdbcType="VARCHAR" property="userPhone" />
     <result column="product_color" jdbcType="VARCHAR" property="productColor" />
     <result column="sum_price" jdbcType="INTEGER" property="sumPrice" />
   </resultMap>
@@ -65,7 +65,7 @@
       #{boughtTime,jdbcType=BIGINT}, #{productPrice,jdbcType=INTEGER}, #{buyQuantity,jdbcType=INTEGER}, 
       #{orderAssessment,jdbcType=INTEGER}, #{orderState,jdbcType=INTEGER}, #{productImg,jdbcType=VARCHAR}, 
       #{productId,jdbcType=BIGINT}, #{takeDeliveryName,jdbcType=VARCHAR}, #{takeDeliveryAddress,jdbcType=VARCHAR}, 
-      #{takeDeliveryPhone,jdbcType=INTEGER}, #{userPhone,jdbcType=INTEGER}, #{productColor,jdbcType=VARCHAR}, 
+      #{takeDeliveryPhone,jdbcType=VARCHAR}, #{userPhone,jdbcType=VARCHAR}, #{productColor,jdbcType=VARCHAR}, 
       #{sumPrice,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="goal.money.providerdemo.dto.OrderInfo">
@@ -162,10 +162,10 @@
         #{takeDeliveryAddress,jdbcType=VARCHAR},
       </if>
       <if test="takeDeliveryPhone != null">
-        #{takeDeliveryPhone,jdbcType=INTEGER},
+        #{takeDeliveryPhone,jdbcType=VARCHAR},
       </if>
       <if test="userPhone != null">
-        #{userPhone,jdbcType=INTEGER},
+        #{userPhone,jdbcType=VARCHAR},
       </if>
       <if test="productColor != null">
         #{productColor,jdbcType=VARCHAR},
@@ -216,10 +216,10 @@
         take_delivery_address = #{takeDeliveryAddress,jdbcType=VARCHAR},
       </if>
       <if test="takeDeliveryPhone != null">
-        take_delivery_phone = #{takeDeliveryPhone,jdbcType=INTEGER},
+        take_delivery_phone = #{takeDeliveryPhone,jdbcType=VARCHAR},
       </if>
       <if test="userPhone != null">
-        user_phone = #{userPhone,jdbcType=INTEGER},
+        user_phone = #{userPhone,jdbcType=VARCHAR},
       </if>
       <if test="productColor != null">
         product_color = #{productColor,jdbcType=VARCHAR},
@@ -247,8 +247,8 @@
       product_id = #{productId,jdbcType=BIGINT},
       take_delivery_name = #{takeDeliveryName,jdbcType=VARCHAR},
       take_delivery_address = #{takeDeliveryAddress,jdbcType=VARCHAR},
-      take_delivery_phone = #{takeDeliveryPhone,jdbcType=INTEGER},
-      user_phone = #{userPhone,jdbcType=INTEGER},
+      take_delivery_phone = #{takeDeliveryPhone,jdbcType=VARCHAR},
+      user_phone = #{userPhone,jdbcType=VARCHAR},
       product_color = #{productColor,jdbcType=VARCHAR},
       sum_price = #{sumPrice,jdbcType=INTEGER}
     where order_id = #{orderId,jdbcType=BIGINT}

@@ -54,25 +54,25 @@ public interface UserInfoMapper {
 
     UserInfo queryByOpenid(String openid);
 
-    void bindPhone(@Param("phone") int phone, @Param("openid") String openid);
+    void bindPhone(@Param("phone") String phone, @Param("openid") String openid);
 
-    UserInfo queryByPhone(int phone);
+    UserInfo queryByPhone(String phone);
 
-    void inserPhoneAndPwd(@Param("phone") int phone,@Param("password") String password);
+    void inserPhoneAndPwd(@Param("phone") String phone,@Param("password") String password);
 
     void updatePersonalInfo(UserInfo userInfo);
 
-    int queryUserLevel(int phone);
+    int queryUserLevel(String phone);
 
-    void updateExperience(@Param("phone")int phone,@Param("experience")int experience);
+    void updateExperience(@Param("phone")String phone,@Param("experience")int experience);
 
-    int queryExperience(int phone);
+    int queryExperience(String phone);
 
-    void updateExperienceLevel(@Param("phone") int phone,@Param("experienceLevel")int experienceLevel);
+    void updateExperienceLevel(@Param("phone") String phone,@Param("experienceLevel")int experienceLevel);
 
-    void updateUserLevel(int phone);
+    void updateUserLevel(String phone);
 
     void updateBirth(UserInfo userInfo);
 
-    int queryUserPoint(int phone);
+    int queryUserPoint(String phone);
 }

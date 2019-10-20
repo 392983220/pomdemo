@@ -65,7 +65,7 @@ public class WxController {
     @ResponseBody
     @GetMapping(value = "bindPhone")
     @LoginRequired
-    public String bindPhone(int phone, @CurrentUser UserVo userVo) {
+    public String bindPhone(String phone, @CurrentUser UserVo userVo) {
         if (null == userInfoService.queryByPhone(phone)) {
             userInfoService.bindPhone(phone, userVo.getOpenid());
             if (userInfoService.queryUserLevel(phone) == 0) {

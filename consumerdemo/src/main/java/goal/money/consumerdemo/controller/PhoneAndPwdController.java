@@ -23,7 +23,7 @@ public class PhoneAndPwdController {
 
     @ApiOperation(value = "账号密码注册")
     @GetMapping(value = "PhoneAndPwdRegister")
-    public String PhoneAndPwdLogin(int phone, String password) {
+    public String PhoneAndPwdLogin(String phone, String password) {
         if (null == userInfoService.queryByPhone(phone)) {
             userInfoService.inserPhoneAndPwd(phone, password);
             return "注册成功";
@@ -34,7 +34,7 @@ public class PhoneAndPwdController {
 
     @ApiOperation(value = "账号密码登陆")
     @GetMapping(value = "phoneAndPwdLogin")
-    public String phoneAndPwdLogin(int phone, String password, boolean isAccept) {
+    public String phoneAndPwdLogin(String phone, String password, boolean isAccept) {
         if (!isAccept) {
             return "请点击我同意";
         } else {

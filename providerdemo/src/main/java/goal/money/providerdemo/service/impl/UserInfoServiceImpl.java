@@ -22,17 +22,17 @@ public class UserInfoServiceImpl implements UserInfoService {
     }
 
     @Override
-    public void bindPhone(int phone, String openid) {
+    public void bindPhone(String phone, String openid) {
         userInfoMapper.bindPhone(phone, openid);
     }
 
     @Override
-    public UserInfo queryByPhone(int phone) {
+    public UserInfo queryByPhone(String phone) {
         return userInfoMapper.queryByPhone(phone);
     }
 
     @Override
-    public void inserPhoneAndPwd(int phone, String password) {
+    public void inserPhoneAndPwd(String phone, String password) {
         userInfoMapper.inserPhoneAndPwd(phone, password);
     }
 
@@ -44,17 +44,17 @@ public class UserInfoServiceImpl implements UserInfoService {
 
 
     @Override
-    public int queryUserLevel(int phone) {
+    public int queryUserLevel(String phone) {
         return userInfoMapper.queryUserLevel(phone);
     }
 
     @Override
-    public void updateExperience(int phone, int experience) {
+    public void updateExperience(String phone, int experience) {
         userInfoMapper.updateExperience(phone, experience);
     }
 
     @Override
-    public int queryExperience(int phone) {
+    public int queryExperience(String phone) {
         return userInfoMapper.queryExperience(phone);
     }
 
@@ -68,12 +68,12 @@ public class UserInfoServiceImpl implements UserInfoService {
     }
 
     @Override
-    public void updateExperienceLevel(int phone, int experienceLevel) {
+    public void updateExperienceLevel(String phone, int experienceLevel) {
         userInfoMapper.updateExperienceLevel(phone,experienceLevel);
     }
 
     @Override
-    public void updateUserLevel(int phone) {
+    public void updateUserLevel(String phone) {
         userInfoMapper.updateUserLevel(phone);
     }
 
@@ -83,7 +83,7 @@ public class UserInfoServiceImpl implements UserInfoService {
     }
 
     @Override
-    public int queryUserPoint(int phone) {
+    public int queryUserPoint(String phone) {
         return userInfoMapper.queryUserPoint(phone);
     }
 }

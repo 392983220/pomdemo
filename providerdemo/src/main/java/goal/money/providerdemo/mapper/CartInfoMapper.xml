@@ -14,7 +14,7 @@
     <result column="product_describe" jdbcType="VARCHAR" property="productDescribe" />
     <result column="user_id" jdbcType="BIGINT" property="userId" />
     <result column="product_color" jdbcType="VARCHAR" property="productColor" />
-    <result column="phone" jdbcType="INTEGER" property="phone" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
     <result column="price_multiply_quantity" jdbcType="INTEGER" property="priceMultiplyQuantity" />
     <result column="good_rate" jdbcType="DOUBLE" property="goodRate" />
   </resultMap>
@@ -55,7 +55,7 @@
       price_multiply_quantity, good_rate)
     values (#{cartId,jdbcType=BIGINT}, #{productId,jdbcType=BIGINT}, #{productName,jdbcType=VARCHAR}, 
       #{productPrice,jdbcType=INTEGER}, #{buyQuantity,jdbcType=INTEGER}, #{productDescribe,jdbcType=VARCHAR}, 
-      #{userId,jdbcType=BIGINT}, #{productColor,jdbcType=VARCHAR}, #{phone,jdbcType=INTEGER}, 
+      #{userId,jdbcType=BIGINT}, #{productColor,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, 
       #{priceMultiplyQuantity,jdbcType=INTEGER}, #{goodRate,jdbcType=DOUBLE})
   </insert>
   <insert id="insertSelective" parameterType="goal.money.providerdemo.dto.CartInfo">
@@ -125,7 +125,7 @@
         #{productColor,jdbcType=VARCHAR},
       </if>
       <if test="phone != null">
-        #{phone,jdbcType=INTEGER},
+        #{phone,jdbcType=VARCHAR},
       </if>
       <if test="priceMultiplyQuantity != null">
         #{priceMultiplyQuantity,jdbcType=INTEGER},
@@ -164,7 +164,7 @@
         product_color = #{productColor,jdbcType=VARCHAR},
       </if>
       <if test="phone != null">
-        phone = #{phone,jdbcType=INTEGER},
+        phone = #{phone,jdbcType=VARCHAR},
       </if>
       <if test="priceMultiplyQuantity != null">
         price_multiply_quantity = #{priceMultiplyQuantity,jdbcType=INTEGER},
@@ -188,7 +188,7 @@
       product_describe = #{productDescribe,jdbcType=VARCHAR},
       user_id = #{userId,jdbcType=BIGINT},
       product_color = #{productColor,jdbcType=VARCHAR},
-      phone = #{phone,jdbcType=INTEGER},
+      phone = #{phone,jdbcType=VARCHAR},
       price_multiply_quantity = #{priceMultiplyQuantity,jdbcType=INTEGER},
       good_rate = #{goodRate,jdbcType=DOUBLE}
     where cart_id = #{cartId,jdbcType=BIGINT}
@@ -213,7 +213,5 @@
     <select id="queryCartById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
         select * from cart_info where cart_id=#{cartId}
     </select>
-
-
 
 </mapper>
