@@ -43,18 +43,23 @@ public class CartServiceImpl implements CartService {
     }
 
     @Override
-    public CartInfo queryCart(Long userId, Long productId) {
-        return cartInfoMapper.queryCart(userId,productId);
+    public CartInfo queryCart(String phone, Long productId) {
+        return cartInfoMapper.queryCart(phone,productId);
     }
 
     @Override
-    public void updateBuyQuantity(int buyQuantity) {
-        cartInfoMapper.updateBuyQuantity(buyQuantity);
+    public void updateBuyQuantity(int buyQuantity,long cartId) {
+        cartInfoMapper.updateBuyQuantity(buyQuantity,cartId);
     }
 
     @Override
     public CartInfo queryCartById(Long cartId) {
         return cartInfoMapper.queryCartById(cartId);
+    }
+
+    @Override
+    public CartInfo selectByPrimaryKey(Long cartId) {
+        return cartInfoMapper.selectByPrimaryKey(cartId);
     }
 
 

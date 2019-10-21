@@ -2,13 +2,15 @@ package goal.money.consumerdemo.vo;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * @version 1.0
  * @Author 张深
  * @create 2019/10/17 11:36
  */
 @Data
-public class ProductInfoVo {
+public class ProductInfoVo implements Serializable {
     private Long productId;
     private Long saleQuantity;
     private String productName;

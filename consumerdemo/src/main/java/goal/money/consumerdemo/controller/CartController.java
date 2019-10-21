@@ -29,7 +29,7 @@ import java.util.Map;
  * @Author 张深
  * @create 2019/10/17 11:44
  */
-@Api(tags = "1.0")
+@Api(tags = "购物车")
 @RestController
 @RequestMapping(value = "/cart")
 public class CartController {
@@ -45,6 +45,7 @@ public class CartController {
     public ReturnResult<Map<String, CartInfo>> showUnLoginCart(HttpServletRequest request) {
         HttpSession session = request.getSession();
         Map<String, CartInfo> cartInfos = (Map<String, CartInfo>) session.getAttribute("carts");
+        if (cartInfos==null){return ReturnResultUtil.returnSuccess(1,"购物车空空如也");}
         for (Map.Entry<String, CartInfo> entry : cartInfos.entrySet()) {
             cartService.updatePriceMultiplyQuantity(entry.getValue().getCartId());
         }
@@ -66,10 +67,10 @@ public class CartController {
     @GetMapping(value = "updateLoginBuyQuantity")
     @LoginRequired
     public  ReturnResult<CartInfo> updateLoginBuyQuantity(@CurrentUser UserVo userVo, Long productId, int buyQuantity) {
-        CartInfo cartInfo = cartService.queryCart(userVo.getUserId(), productId);
+        CartInfo cartInfo = cartService.queryCart(userVo.getPhone(), productId);
         int productQuantity = productService.queryQuantity(cartInfo.getProductId());
         if (productQuantity >= buyQuantity) {
-            cartService.updateBuyQuantity(buyQuantity);
+            cartService.updateBuyQuantity(buyQuantity,cartInfo.getCartId());
             if (buyQuantity > 0) {
                 cartService.updatePriceMultiplyQuantity(cartInfo.getCartId());
                 CartInfo updatedCart = cartService.queryCartById(cartInfo.getCartId());
@@ -93,7 +94,7 @@ public class CartController {
         }
         int productQuantity = productService.queryQuantity(cartInfo.getProductId());
         if (productQuantity >= buyQuantity) {
-            cartService.updateBuyQuantity(buyQuantity);
+            cartService.updateBuyQuantity(buyQuantity,cartId);
             if (buyQuantity > 0) {
                 cartService.updatePriceMultiplyQuantity(cartInfo.getCartId());
                 CartInfo updatedCart = cartService.queryCartById(cartInfo.getCartId());

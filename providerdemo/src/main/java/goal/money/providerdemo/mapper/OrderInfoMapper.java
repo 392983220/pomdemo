@@ -54,15 +54,18 @@ public interface OrderInfoMapper {
      */
     int updateByPrimaryKey(OrderInfo record);
 
-    void updateOrderState(String orderNumber);
+    void insertIntoOrder(OrderInfo orderInfo);
 
-    List<OrderInfo> queryByState(@Param("orderState") int orderState, @Param("startPage")int startPage, @Param("pageSize")int pageSize);
+    int querySumProductQuantity(String phone);
 
-    List<OrderInfo> queryByNo(@Param("orderNumber") String orderNumber,@Param("orderState") int orderState);
+    int querySumPrice(String phone);
 
-    List<OrderInfo> queryByName(@Param("productName")String productName,@Param("orderState") int orderState);
+    List<OrderInfo> queryOrderByState(@Param("phone") String phone,@Param("orderState") int orderState
+            ,@Param("startPage")int startPage,@Param("pageSize")int pageSize);
 
-    OrderInfo queryByOrderNo(String orderNumber);
+    List<OrderInfo> queryOrderByNo(@Param("phone") String phone,@Param("orderState") String orderNumber,@Param("orderState")int orderState);
 
-    void updateOrderAssessment(OrderInfo orderInfo);
+    List<OrderInfo> queryOrderByName(@Param("phone") String phone,@Param("orderState") String productName,@Param("orderState")int orderState);
+
+
 }

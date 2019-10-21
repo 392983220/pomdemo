@@ -1,7 +1,7 @@
 package goal.money.consumerdemo.custom;
 
 import com.alibaba.dubbo.common.utils.StringUtils;
-import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import goal.money.consumerdemo.contants.UserContant;
 import goal.money.consumerdemo.utils.RedisUtils;
 import goal.money.consumerdemo.vo.UserVo;
@@ -30,8 +30,8 @@ public class LoginReqComplete implements HandlerInterceptor {
         if (methodAnnotation != null) {
             String wxToken = request.getHeader("wxToken");  // 从 http 请求头中取出 token
             String userToken = request.getHeader("userToken");
-           String userJsonStr = (String) redisUtils.get(UserContant.NAME_SPACE+(StringUtils.isNotEmpty(userToken)?userToken:wxToken));
-            UserVo userVo= JSON.parseObject(userJsonStr, UserVo.class);
+           String userJsonStr =  (String) redisUtils.get(UserContant.NAME_SPACE+(StringUtils.isNotEmpty(userToken)?userToken:wxToken));
+            UserVo userVo= JSONObject.parseObject(userJsonStr, UserVo.class);
             if (userVo!=null){
                 request.setAttribute("wxToken", userVo);
             }else {

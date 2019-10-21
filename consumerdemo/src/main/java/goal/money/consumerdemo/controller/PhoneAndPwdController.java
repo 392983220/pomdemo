@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@Api(value = "账号密码")
+@Api(tags = "账号密码")
 @RestController
 @RequestMapping(value = "phoneAndPwd")
 public class PhoneAndPwdController {

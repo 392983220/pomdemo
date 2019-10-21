@@ -411,15 +411,17 @@ public class ProductInfo implements Serializable {
 
 
     public int getStartPage() {
+        int i=1;
+        if (startPage>=i){
+            this.startPage = (startPage-1)*pageSize;
+        }else {
+            this.startPage=0;
+        }
         return startPage;
     }
 
     public void setStartPage(int startPage) {
-        int i=1;
-        if (startPage>=1){
-            this.startPage = (startPage-1)*pageSize;
-        }
-        this.startPage=0;
+        this.startPage=startPage;
     }
 
     public int getPageSize() {

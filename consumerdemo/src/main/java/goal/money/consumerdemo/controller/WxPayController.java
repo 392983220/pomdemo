@@ -8,7 +8,6 @@ import goal.money.consumerdemo.utils.WxPayUtils;
 import goal.money.consumerdemo.vo.UserVo;
 import goal.money.consumerdemo.wx.WxApi;
 import goal.money.consumerdemo.wx.WxPay;
-import goal.money.providerdemo.dto.OrderInfo;
 import goal.money.providerdemo.service.OrderInfoService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -24,7 +23,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Map;
 
-@Api(value = "微信支付")
+@Api(tags = "微信支付")
 @RestController
 @RequestMapping(value = "wxPay")
 public class WxPayController {

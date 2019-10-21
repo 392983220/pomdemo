@@ -58,9 +58,9 @@ public interface CartInfoMapper {
 
     void updatePriceMultiplyQuantity(Long cartId);
 
-    CartInfo queryCart(@Param("userId") Long userId, @Param("productId") Long productId);
+    CartInfo queryCart(@Param("phone") String phone, @Param("productId") Long productId);
 
-    void updateBuyQuantity(int buyQuantity);
+    void updateBuyQuantity(@Param("buyQuantity")int buyQuantity,@Param("cartId")long cartId);
 
     CartInfo queryCartById(Long cartId);
 }

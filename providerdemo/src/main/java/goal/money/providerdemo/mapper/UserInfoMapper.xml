@@ -279,10 +279,10 @@
     <update id="updatePersonalInfo" parameterType="goal.money.providerdemo.dto.UserInfo">
         update user_info
         <set>
-            <if test="nickname != null">
+            <if test="nickname != null and nickname !=''">
                 nickname = #{nickname,jdbcType=VARCHAR},
             </if>
-            <if test="sex != null">
+            <if test="sex != null and sex !=''">
                 sex = #{sex,jdbcType=INTEGER},
             </if>
         </set>
@@ -295,7 +295,7 @@
         update user_info set user_birth=#{userBirth},birth_is_update=1 where phone=#{phone}
     </update>
 
-    <select id="queryUserLevel" parameterType="java.lang.Integer" resultType="java.lang.String">
+    <select id="queryUserLevel" parameterType="java.lang.String" resultType="java.lang.Integer">
         select user_level
         from user_info
         where phone = #{phone}
@@ -325,7 +325,7 @@
         where phone = #{phone}
     </update>
 
-<select id="queryUserPoint" parameterType="goal.money.providerdemo.dto.UserInfo" resultType="java.lang.String">
+<select id="queryUserPoint" parameterType="java.lang.String" resultType="java.lang.Integer">
   select accumulate_point from user_info where phone=#{phone}
 </select>
 

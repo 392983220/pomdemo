@@ -8,6 +8,12 @@ public class PageVo implements Serializable {
 
 
     public int getStartPage() {
+        int i=1;
+        if (startPage>=i){
+            this.startPage = (startPage-1)*pageSize;
+        }else {
+            this.startPage=0;
+        }
         return startPage;
     }
 

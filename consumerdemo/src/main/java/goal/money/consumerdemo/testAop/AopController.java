@@ -14,7 +14,7 @@ public class AopController {
 
     @GetMapping(value = "login")
     @ApiOperation(value = "登陆")
-    public UserVo login(int phone,String password){
+    public UserVo login(String phone,String password){
         UserVo userVo=new UserVo();
         userVo.setPhone(phone);
         userVo.setPassword(password);

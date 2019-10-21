@@ -19,9 +19,11 @@ public interface CartService {
 
     void updatePriceMultiplyQuantity(Long cartId);
 
-    CartInfo queryCart(Long userId,Long productId);
+    CartInfo queryCart(String phone,Long productId);
 
-    void updateBuyQuantity(int buyQuantity);
+    void updateBuyQuantity(int buyQuantity,long cartId);
 
     CartInfo queryCartById(Long cartId);
+
+    CartInfo selectByPrimaryKey(Long cartId);
 }

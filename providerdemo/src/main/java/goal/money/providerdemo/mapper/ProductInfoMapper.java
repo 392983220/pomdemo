@@ -58,7 +58,7 @@ public interface ProductInfoMapper {
 
     int queryQuantity(Long productId);
 
-    ProductInfo queryProductByNameAndColor(String productName,String productColor);
+    ProductInfo queryProductByNameAndColor(@Param("productName")String productName,@Param("productColor")String productColor);
 
     List<ProductInfo> queryProductListByName(@Param("productName") String productName,@Param("productCategory") String productCategory);
 

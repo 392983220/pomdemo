@@ -203,10 +203,10 @@
     </update>
 
     <select id="queryCart" resultMap="BaseResultMap">
-        select * from cart_info where user_id=#{userId} and product_id=#{productId}
+        select * from cart_info where phone=#{phone} and product_id=#{productId}
     </select>
 
-    <update id="updateBuyQuantity" parameterType="java.lang.Integer">
+    <update id="updateBuyQuantity" >
         update cart_info set buy_quantity=#{buyQuantity} where cart_id=#{cartId}
     </update>
 

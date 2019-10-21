@@ -2,7 +2,6 @@ package goal.money.consumerdemo.wx;
 
 import goal.money.consumerdemo.utils.CommonUtil;
 import goal.money.consumerdemo.utils.WxPayUtils;
-import goal.money.providerdemo.dto.OrderInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

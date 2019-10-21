@@ -1,40 +1,41 @@
 package goal.money.consumerdemo.vo;
 
+import io.swagger.annotations.ApiParam;
+
 import java.io.Serializable;
-import java.util.Date;
 
 public class UserVo implements Serializable {
-
+    @ApiParam(hidden = true)
     private Long userId;
-
+    @ApiParam(hidden = true)
     private String phone;
-
+    @ApiParam(hidden = true)
     private String password;
-
+    @ApiParam(hidden = true)
     private String openid;
-
+    @ApiParam(hidden = true)
     private String nickname;
-
+    @ApiParam(hidden = true)
     private Integer sex;
-
+    @ApiParam(hidden = true)
     private String language;
-
+    @ApiParam(hidden = true)
     private String city;
-
+    @ApiParam(hidden = true)
     private String province;
-
+    @ApiParam(hidden = true)
     private String headimgurl;
-
+    @ApiParam(hidden = true)
     private Integer accumulatePoint;
-
+    @ApiParam(hidden = true)
     private Integer experience;
-
+    @ApiParam(hidden = true)
     private Integer experienceLevel;
-
+    @ApiParam(hidden = true)
     private Integer userLevel;
-
+    @ApiParam(hidden = true)
     private Long userBirth;
-
+    @ApiParam(hidden = true)
     private Integer birthIsUpdate;
 
     public Long getUserId() {
