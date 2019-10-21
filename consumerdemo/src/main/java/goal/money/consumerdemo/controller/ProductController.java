@@ -77,7 +77,7 @@ public class ProductController {
         if (cartInfo != null) {
             cartService.updateBuyQuantity(cartInfo.getBuyQuantity() + buyQuantity, cartInfo.getCartId());
             cartService.updatePriceMultiplyQuantity(cartInfo.getCartId());
-            return ReturnResultUtil.returnSuccessData(1, "登陆状态商品选购", cartService.selectCartList(userVo.getUserId()));
+            return ReturnResultUtil.returnSuccessData(1, "登陆状态商品选购", cartService.selectCartList(userVo.getPhone()));
         }
         cartInfo = new CartInfo();
         ProductInfo productInfo = productService.selectByPrimaryKey(productId);
@@ -91,7 +91,7 @@ public class ProductController {
         cartInfo.setProductDescribe(productInfo.getProductDescribe());
         cartInfo.setPhone(userVo.getPhone());
         cartService.insertSelective(cartInfo);
-        return ReturnResultUtil.returnSuccessData(1, "登陆状态商品选购", cartService.selectCartList(userVo.getUserId()));
+        return ReturnResultUtil.returnSuccessData(1, "登陆状态商品选购", cartService.selectCartList(userVo.getPhone()));
     }
 
     //已测试

@@ -56,7 +56,7 @@ public class CartController {
     @GetMapping(value = "/showLoginCart")
     @LoginRequired
     public ReturnResult<Map<String, CartInfo>> showLoginCart(@CurrentUser UserVo userVo) {
-        List<CartInfo> cartInfos = cartService.selectCartList(userVo.getUserId());
+        List<CartInfo> cartInfos = cartService.selectCartList(userVo.getPhone());
         for (CartInfo cartInfo : cartInfos) {
             cartService.updatePriceMultiplyQuantity(cartInfo.getCartId());
         }

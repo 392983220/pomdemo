@@ -61,6 +61,13 @@
             <artifactId>lombok</artifactId>
             <version>1.16.16</version>
         </dependency>
+        <!--activemq依赖开始-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-activemq</artifactId>
+        </dependency>
+        <!--activemq依赖结束-->
+
     </dependencies>
 
     <build>

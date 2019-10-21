@@ -28,8 +28,8 @@ public class CartServiceImpl implements CartService {
     }
 
     @Override
-    public List<CartInfo> selectCartList(Long userId) {
-        return cartInfoMapper.selectCartList(userId);
+    public List<CartInfo> selectCartList(String phone) {
+        return cartInfoMapper.selectCartList(phone);
     }
 
     @Override

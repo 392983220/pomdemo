@@ -13,7 +13,7 @@ public interface CartService {
     //购物车中添加商品
     int insertSelective(CartInfo cartInfo);
     //从购物车中查找Pid列表
-    List<CartInfo> selectCartList(Long userId);
+    List<CartInfo> selectCartList(String phone);
     //物理删除购物车信息
     int deleteByPrimaryKey(Long cartId);
 

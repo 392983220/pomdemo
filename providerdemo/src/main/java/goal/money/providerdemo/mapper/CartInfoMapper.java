@@ -54,7 +54,7 @@ public interface CartInfoMapper {
      */
     int updateByPrimaryKey(CartInfo record);
 
-    List<CartInfo> selectCartList(Long userId);
+    List<CartInfo> selectCartList(String phone);
 
     void updatePriceMultiplyQuantity(Long cartId);
 

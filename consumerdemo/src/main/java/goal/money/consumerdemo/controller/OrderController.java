@@ -49,9 +49,13 @@ public class OrderController {
         orderInfo.setBuyQuantity(orderInfoService.querySumProductQuantity(userVo.getPhone()));
         orderInfo.setSumPrice(orderInfoService.querySumPrice(userVo.getPhone()));
         orderInfo.setOrderNumber(UUID.randomUUID().toString().replaceAll("-", "").substring(0, 20));
-        orderInfoService.insertIntoOrder(orderInfo);
-        redisUtils.set(userVo.getPhone(), JSONObject.toJSONString(orderInfo), 60);
-        return ReturnResultUtil.returnSuccessData(1, "生成订单", orderInfo);
+        if (orderInfo.getPhone().equals(userVo.getPhone()) &&
+                orderInfo.getTakeDeliveryAddress() != null && orderInfo.getTakeDeliveryName() != null && orderInfo.getTakeDeliveryPhone() != null){
+            orderInfoService.insertIntoOrder(orderInfo);
+            redisUtils.set(userVo.getPhone(), JSONObject.toJSONString(orderInfo), 60);
+            return ReturnResultUtil.returnSuccessData(1, "生成订单", orderInfo);
+        }else return ReturnResultUtil.returnFail(2,"订单信息不完整");
+            
     }
 
     @GetMapping(value = "queryOrder")
@@ -92,7 +96,7 @@ public class OrderController {
                 orderInfoService.queryOrderByName(userVo.getPhone(), orderName, orderState));
     }
 
-    @GetMapping(value = "givePoint")
+    /*@GetMapping(value = "givePoint")
     @ApiOperation(value = "用户打分")
     @LoginRequired
     public ReturnResult<OrderInfo> givePoint(@CurrentUser UserVo userVo, DetailInfo detailInfo, int point) {
@@ -105,5 +109,5 @@ public class OrderController {
         } else {
             return ReturnResultUtil.returnFail(2, "订单暂时不能评价");
         }
-    }
+    }*/
 }

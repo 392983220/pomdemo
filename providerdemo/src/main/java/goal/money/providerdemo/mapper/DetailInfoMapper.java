@@ -53,4 +53,6 @@ public interface DetailInfoMapper {
     int updateByPrimaryKey(DetailInfo record);
 
     DetailInfo queryDetailByPhoneAndProductId(@Param("phone") String phone, @Param("productId")long productId);
+
+    void updateBuyQuantity(@Param("phone") String phone,@Param("productId")long productId,@Param("buyQuantity")int buyQuantity);
 }

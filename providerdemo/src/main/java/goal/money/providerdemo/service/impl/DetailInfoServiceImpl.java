@@ -24,4 +24,9 @@ public class DetailInfoServiceImpl implements DetailInfoService {
     public DetailInfo queryDetailByPhoneAndProductId(String phone, long productId) {
         return detailInfoMapper.queryDetailByPhoneAndProductId(phone,productId);
     }
+
+    @Override
+    public void updateBuyQuantity(String phone, long productId, int buyQuantity) {
+        detailInfoMapper.updateBuyQuantity(phone,productId,buyQuantity);
+    }
 }

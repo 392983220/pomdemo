@@ -194,8 +194,8 @@
     where cart_id = #{cartId,jdbcType=BIGINT}
   </update>
 
-    <select id="selectCartList" parameterType="java.lang.Long" resultMap="BaseResultMap">
-    select * from cart_info where user_id = #{userId,jdbcType=BIGINT}
+    <select id="selectCartList" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select * from cart_info where phone = #{phone}
   </select>
 
     <update id="updatePriceMultiplyQuantity" parameterType="java.lang.Long">

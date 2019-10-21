@@ -48,7 +48,7 @@ public class DetailController {
             detailInfoService.insertSelective(detailInfo);
         } else {
             detailInfo.setBuyQuantity(cartInfo.getBuyQuantity() + detailInfo.getBuyQuantity());
-            detailInfoService.insertSelective(detailInfo);
+            detailInfoService.updateBuyQuantity(userVo.getPhone(),detailInfo.getProductId(),detailInfo.getBuyQuantity());
         }
         return ReturnResultUtil.returnSuccessData(1, "生成商品详情表", detailInfo);
     }

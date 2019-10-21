@@ -198,6 +198,8 @@
     select * from detail_info where phone=#{phone} and product_id=#{productId}
   </select>
 
-
+<update id="updateBuyQuantity" >
+  update detail_info set buy_quantity=#{buyQuantity} where phone=#{phone} and product_id=#{productId}
+</update>
 
 </mapper>

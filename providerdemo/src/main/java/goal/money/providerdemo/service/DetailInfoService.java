@@ -10,4 +10,6 @@ public interface DetailInfoService {
     int insertSelective(DetailInfo record);
 
     DetailInfo queryDetailByPhoneAndProductId( String phone,long productId);
+
+    void updateBuyQuantity( String phone,long productId,int buyQuantity);
 }

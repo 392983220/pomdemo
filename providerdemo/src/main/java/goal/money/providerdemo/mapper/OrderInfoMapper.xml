@@ -214,7 +214,7 @@
   </resultMap>
   
   <select id="queryOrderByPhone" parameterType="java.lang.String" resultMap="ResultMap">
-    select * from detail_info,order_info where detail_info.phone=order_info.phone
+    select * from order_info join detail_info on detail_info.phone=order_info.phone where order_info.phone=#{phone}
   </select>
 
   <insert id="insertIntoOrder" >
@@ -223,14 +223,14 @@
   </insert>
 
   <select id="querySumProductQuantity" parameterType="java.lang.String" resultType="java.lang.Integer">
-    select count(0) from order_info join detail_info on order_info.phone=detail_info.phone
+    select count(0) from order_info join detail_info on order_info.phone=detail_info.phone where order_info.phone=#{phone}
   </select>
 
   <select id="querySumPrice" parameterType="java.lang.String" resultType="java.lang.Integer">
-    select count(0) from order_info join detail_info on order_info.phone=detail_info.phone
+    select count(0) from order_info join detail_info on order_info.phone=detail_info.phone  where order_info.phone=#{phone}
   </select>
 
-  <select id="queryOrderByState"  parameterMap="ResultMap">
+  <select id="queryOrderByState"  resultMap="ResultMap">
     select * from order_info join detail_info on order_info.phone=detail_info.phone
     where order_info.phone=#{phone} and order_info.order_state=#{orderState} limit #{startPage},#{pageSize}
   </select>
@@ -244,6 +244,5 @@
     select * from order_info join detail_info on order_info.phone=detail_info.phone
     where detail_info.product_name like concat('%',#{productName},'%') and order_info.order_state=#{orderState} and order_info.phone=#{phone}
   </select>
-
-
+  
 </mapper>
