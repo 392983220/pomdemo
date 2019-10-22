@@ -1,7 +1,6 @@
 package goal.money.providerdemo.mapper;
 
 import goal.money.providerdemo.dto.UserInfo;
-import org.apache.ibatis.annotations.Param;
 
 public interface UserInfoMapper {
     /**
@@ -51,28 +50,4 @@ public interface UserInfoMapper {
      * @mbg.generated
      */
     int updateByPrimaryKey(UserInfo record);
-
-    UserInfo queryByOpenid(String openid);
-
-    void bindPhone(@Param("phone") String phone, @Param("openid") String openid);
-
-    UserInfo queryByPhone(String phone);
-
-    void inserPhoneAndPwd(@Param("phone") String phone,@Param("password") String password);
-
-    void updatePersonalInfo(UserInfo userInfo);
-
-    int queryUserLevel(String phone);
-
-    void updateExperience(@Param("phone")String phone,@Param("experience")int experience);
-
-    int queryExperience(String phone);
-
-    void updateExperienceLevel(@Param("phone") String phone,@Param("experienceLevel")int experienceLevel);
-
-    void updateUserLevel(String phone);
-
-    void updateBirth(UserInfo userInfo);
-
-    int queryUserPoint(String phone);
 }

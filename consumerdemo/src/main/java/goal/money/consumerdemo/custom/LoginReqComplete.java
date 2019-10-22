@@ -35,7 +35,7 @@ public class LoginReqComplete implements HandlerInterceptor {
             if (userVo!=null){
                 request.setAttribute("wxToken", userVo);
             }else {
-                throw  new RuntimeException("login error");
+                //throw  new RuntimeException("login error");
             }
             return true;
         }

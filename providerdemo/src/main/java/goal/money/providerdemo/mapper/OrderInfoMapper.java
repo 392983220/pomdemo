@@ -1,9 +1,6 @@
 package goal.money.providerdemo.mapper;
 
 import goal.money.providerdemo.dto.OrderInfo;
-import org.apache.ibatis.annotations.Param;
-
-import java.util.List;
 
 public interface OrderInfoMapper {
     /**
@@ -53,19 +50,4 @@ public interface OrderInfoMapper {
      * @mbg.generated
      */
     int updateByPrimaryKey(OrderInfo record);
-
-    void insertIntoOrder(OrderInfo orderInfo);
-
-    int querySumProductQuantity(String phone);
-
-    int querySumPrice(String phone);
-
-    List<OrderInfo> queryOrderByState(@Param("phone") String phone,@Param("orderState") int orderState
-            ,@Param("startPage")int startPage,@Param("pageSize")int pageSize);
-
-    List<OrderInfo> queryOrderByNo(@Param("phone") String phone,@Param("orderState") String orderNumber,@Param("orderState")int orderState);
-
-    List<OrderInfo> queryOrderByName(@Param("phone") String phone,@Param("orderState") String productName,@Param("orderState")int orderState);
-
-
 }

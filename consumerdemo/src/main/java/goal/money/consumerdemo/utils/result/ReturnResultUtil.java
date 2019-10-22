@@ -14,11 +14,12 @@ public class ReturnResultUtil {
      * @param data
      * @return
      */
-    public static ReturnResult returnFailData(Integer code, String message, String data) {
+    public static ReturnResult returnFailData(Integer code, String message, Object data) {
         ReturnResult returnResult = new ReturnResult();
         returnResult.setCode(code);
         returnResult.setMessage(message);
         returnResult.setData(data);
+
         return returnResult;
     }
 

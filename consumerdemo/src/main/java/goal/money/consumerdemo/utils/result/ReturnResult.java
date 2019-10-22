@@ -15,4 +15,6 @@ public class ReturnResult<T> implements Serializable {
     private Integer code;
     private String message;
     private T data;
+
+
 }

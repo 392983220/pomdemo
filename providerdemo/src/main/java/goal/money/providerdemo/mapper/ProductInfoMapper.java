@@ -54,15 +54,10 @@ public interface ProductInfoMapper {
      */
     int updateByPrimaryKey(ProductInfo record);
 
-    ProductInfo selectGoods(Long productId);
+    //根据类型，分页查找商品
+    List<ProductInfo> getGoods(@Param("productCategory")int productCategory, @Param("startPage") int startPage,@Param("pageSize") int pageSize);
+    //根据销量展示默认商品
+    String getDefault();
 
-    int queryQuantity(Long productId);
-
-    ProductInfo queryProductByNameAndColor(@Param("productName")String productName,@Param("productColor")String productColor);
-
-    List<ProductInfo> queryProductListByName(@Param("productName") String productName,@Param("productCategory") String productCategory);
-
-    List<ProductInfo>  showIndexProductList(@Param("productCategory")String productCategory,@Param("startPage")int startPage,@Param("pageSize")int pageSize);
-
-    ProductInfo defaultProduct();
+    List<ProductInfo> getAllGoods();
 }

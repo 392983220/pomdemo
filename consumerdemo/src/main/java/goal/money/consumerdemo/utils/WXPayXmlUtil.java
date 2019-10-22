@@ -20,7 +20,6 @@ public final class WXPayXmlUtil {
         documentBuilderFactory.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);
         documentBuilderFactory.setXIncludeAware(false);
         documentBuilderFactory.setExpandEntityReferences(false);
-
         return documentBuilderFactory.newDocumentBuilder();
     }
 

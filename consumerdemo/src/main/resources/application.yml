@@ -1,0 +1,5 @@
+cate:
+  map:
+    {"水果" : "localhost:8080/pro/conditionalSearch?cateGory=1",
+     "蔬菜" : "localhost:8080/pro/conditionalSearch?cateGory=2",
+     "海鲜" : "localhost:8080/pro/conditionalSearch?cateGory=3"}

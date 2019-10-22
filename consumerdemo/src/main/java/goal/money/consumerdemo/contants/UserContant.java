@@ -10,5 +10,5 @@ public final class UserContant {
     public static final int USER_IS_DEL_FAIL_CODE = 450;
 
     public static final String NAME_SPACE="WxUserLogin:";
-    public static final String Phone_PWD_NAME_SPACE="phoneAndPwdUserLogin";
+    public static final String Phone_PWD_NAME_SPACE="phoneAndPwdUserLogin:";
 }

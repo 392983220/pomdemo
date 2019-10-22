@@ -43,7 +43,7 @@
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 
-        <table schema="" tableName="recycle " domainObjectName="Recycle"
+        <table schema="" tableName="cart_info " domainObjectName="CartInfo"
                enableCountByExample="false"
                enableUpdateByExample="false"
                enableDeleteByExample="false"
