@@ -4,6 +4,7 @@ import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
+import java.io.Serializable;
 import java.util.Map;
 
 /**
@@ -13,7 +14,9 @@ import java.util.Map;
 @Component
 @ConfigurationProperties(prefix ="cate")
 @Data
-public class NameAndUrl {
+public class NameAndUrl implements Serializable {
+    private static final long serialVersionUID = -2068751299199793508L;
     private Map<String,String> map;
     private String defaultMsg;
+    private Integer cartNum;
 }

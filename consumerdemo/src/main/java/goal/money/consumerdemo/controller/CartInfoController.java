@@ -1,5 +1,6 @@
 package goal.money.consumerdemo.controller;
 
+import com.alibaba.dubbo.config.annotation.Reference;
 import com.alibaba.fastjson.JSONObject;
 import goal.money.consumerdemo.custom.CurrentUser;
 import goal.money.consumerdemo.custom.LoginRequired;
@@ -7,13 +8,15 @@ import goal.money.consumerdemo.utils.GetIpAddressUtil;
 import goal.money.consumerdemo.utils.RedisUtils;
 import goal.money.consumerdemo.utils.result.ReturnResult;
 import goal.money.consumerdemo.utils.result.ReturnResultUtil;
+import goal.money.consumerdemo.vo.ProductInfoVo;
 import goal.money.consumerdemo.vo.UserVo;
 import goal.money.providerdemo.dto.CartInfo;
+import goal.money.providerdemo.dto.ProductInfo;
 import goal.money.providerdemo.service.CartInfoService;
 import goal.money.providerdemo.service.ProductInfoService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import jdk.nashorn.internal.ir.annotations.Reference;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -85,12 +88,55 @@ public class CartInfoController {
             cartInfo.setProductId(productId);
             cartInfo.setBuyQuantity(1);
             cartInfo.setPhone(userVo.getPhone());
-            cartInfo.setPrice(productInfoService.selectByProductInfoId(productId).getProductPrice());
+            cartInfo.setPrice(productInfoService.selectByPrimaryKey(productId).getProductPrice());
             cartInfoService.insertSelective(cartInfo);
             int size = cartInfoService.queryCartByPhone(userVo.getPhone()).size();
             return ReturnResultUtil.returnSuccessData(1, "添加购物车成功", size);
         }
+    }
 
+    @ApiOperation("查看购物车")
+    @GetMapping(value = "/checkCart")
+    @LoginRequired
+    public ReturnResult checkCart(@CurrentUser UserVo userVo, HttpServletRequest request, String phone) {
+        if (null != userVo) {
+            List<CartInfo> cartInfos = cartInfoService.queryCartByPhone(phone);
+            return ReturnResultUtil.returnSuccessData(1, "成功", cartInfos);
+        } else {
+            String key = GetIpAddressUtil.getIpAddr(request);
+            Map<String, Integer> map = null;
+            if (null != redisUtils.get(key)) {
+                map = JSONObject.parseObject(redisUtils.get(key).toString(), HashMap.class);
+                List list = new ArrayList();
+                for (Map.Entry<String, Integer> entry : map.entrySet()) {
+                    Object object = Long.parseLong(entry.getKey());
+                    ProductInfo productInfo = productInfoService.selectByPrimaryKey(Long.parseLong(entry.getKey()));
+                    ProductInfoVo productInfoVo = new ProductInfoVo();
+                    BeanUtils.copyProperties(productInfo, productInfoVo);
+                    productInfoVo.setBuyQuantity(entry.getValue());
+                    list.add(productInfoVo);
+                }
+                return ReturnResultUtil.returnSuccessData(1, "成功", list);
+            } else {
+                return ReturnResultUtil.returnSuccess(1, "购物车为空");
+            }
+        }
+    }
 
+    @ApiOperation("删除购物车")
+    @GetMapping(value = "/deletCart")
+    @LoginRequired
+    public ReturnResult deletCart(@CurrentUser UserVo userVo, HttpServletRequest request, String phone, Long productId) {
+        if (null != userVo) {
+
+            //还没写
+            return null;
+        } else {
+            String key = GetIpAddressUtil.getIpAddr(request);
+            Map<String, Integer> map = JSONObject.parseObject(redisUtils.get(key).toString(), HashMap.class);
+            map.remove(productId.toString());
+            redisUtils.set(key, JSONObject.toJSONString(map));
+            return ReturnResultUtil.returnSuccessData(1,"成功",map);
+        }
     }
 }

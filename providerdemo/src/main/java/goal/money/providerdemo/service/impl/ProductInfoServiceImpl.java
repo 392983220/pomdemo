@@ -34,8 +34,13 @@ public class ProductInfoServiceImpl implements ProductInfoService {
     }
 
     @Override
-    public ProductInfo selectByProductInfoId(Long id) {
-        return productInfoMapper.selectByPrimaryKey(id);
+    public ProductInfo selectByPrimaryKey(Long productId) {
+        return productInfoMapper.selectByPrimaryKey(productId);
+    }
+
+    @Override
+    public List<ProductInfo> checkByName(String productName,int startPage,int pageSize) {
+        return productInfoMapper.checkByName(productName,startPage,pageSize);
     }
 
 }

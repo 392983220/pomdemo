@@ -12,14 +12,12 @@ import java.io.Serializable;
 @Data
 public class ProductInfoVo implements Serializable {
     private Long productId;
-    private Long saleQuantity;
     private String productName;
-    private Long listingTime;
     private String productDescribe;
-    private Long productQuantity;
     private Integer productPrice;
-    private String productCategory;
-    private String color;
+    private int productCategory;
+    private String productColor;
     private String productImg;
     private Integer productScore;
+    private Integer buyQuantity;
 }

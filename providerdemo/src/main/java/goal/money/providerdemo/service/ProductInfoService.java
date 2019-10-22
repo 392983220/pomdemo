@@ -19,5 +19,10 @@ public interface ProductInfoService {
     List<ProductInfo> getAllGoods();
 
     //根据pId查询商品
-    ProductInfo selectByProductInfoId(Long id);
+    ProductInfo selectByPrimaryKey(Long productId);
+
+    //根据商品名称模糊查询
+    List<ProductInfo> checkByName(String productName,int startPage,int pageSize);
+
+
 }

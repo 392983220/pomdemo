@@ -60,4 +60,6 @@ public interface ProductInfoMapper {
     String getDefault();
 
     List<ProductInfo> getAllGoods();
+
+    List<ProductInfo> checkByName(@Param("productName") String productName,@Param("startPage") int startPage,@Param("pageSize") int pageSize);
 }

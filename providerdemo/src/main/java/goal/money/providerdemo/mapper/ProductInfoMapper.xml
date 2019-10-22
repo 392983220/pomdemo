@@ -211,7 +211,7 @@
         select
         <include refid="Base_Column_List"/>
         from product_info
-        where product_category = #{productCategory}
+        where product_category = #{productCategory} order by listing_time desc,sale_quantity desc
         <if test="startPage != null and pageSize != null ">
             limit #{startPage}, #{pageSize}
         </if>
@@ -228,4 +228,12 @@
         from product_info
         order by product_category;
     </select>
+
+    <select id="checkByName"  resultMap="BaseResultMap">
+        select * from product_info where product_name like concat('%',#{productName},'%')
+        <if test="startPage != null and pageSize != null ">
+            limit #{startPage}, #{pageSize}
+        </if>
+    </select>
+
 </mapper>

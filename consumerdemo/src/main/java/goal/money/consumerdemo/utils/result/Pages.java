@@ -28,34 +28,15 @@ public class Pages<T> implements Serializable {
 
     private List<T> currList;
 
-    private String name;
-    private String url;
-
     private ProductInfo productInfo;
 
     public ProductInfo getProductInfo() {
         return productInfo;
     }
-
     public void setProductInfo(ProductInfo productInfo) {
         this.productInfo = productInfo;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
-    }
 
     public Integer getCustomPageSize() {
         return customPageSize;
